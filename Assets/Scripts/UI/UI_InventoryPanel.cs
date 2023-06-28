@@ -40,6 +40,21 @@ public class UI_InventoryPanel : UI_ListPanelBase<UI_InventoryPanel>
             cropDic.Add(cropName, count);
         }
         UpdateItems();
+        //需要通知任务面板刷新
+        UI_TaskPanel.Instance.UpdateTaskItem();
+    }
+
+    //返回数量
+    public int GetCount(string cropName)
+    {
+        try
+        {
+            return cropDic[cropName];
+        }
+        catch
+        {
+            return 0;
+        }
     }
 
 }

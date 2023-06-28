@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,6 +15,7 @@ public class UIManager : MonoBehaviour
 
     private UI_MainPanel mainPanel;
     private UI_BuildPanel buildPanel;
+    private UI_TaskPanel taskPanel;
 
     private void Awake()
     {
@@ -23,6 +25,7 @@ public class UIManager : MonoBehaviour
     {
         mainPanel = transform.Find("MainPanel").GetComponent<UI_MainPanel>();
         buildPanel = transform.Find("BuildPanel").GetComponent<UI_BuildPanel>();
+        taskPanel = transform.Find("TaskPanel").GetComponent<UI_TaskPanel>();
     }
 
 
@@ -47,5 +50,10 @@ public class UIManager : MonoBehaviour
     {
         UITipsText.text = tips;
         UITipsAnimator.SetTrigger("ShowUITips");
+    }
+
+    internal void ShowTaskPanel()
+    {
+        taskPanel.SetActive(true);
     }
 }

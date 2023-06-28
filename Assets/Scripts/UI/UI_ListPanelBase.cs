@@ -40,11 +40,13 @@ public class UI_ListPanelBase<T> : Singleton<T>, IPanel where T: UI_ListPanelBas
 
         if (isShow)
         {
+            //如果当前没有面板被打开，就打开面板
             if (Player_C.Instance.currPanel == null)
             {
                 Player_C.Instance.currPanel = this;
                 gameObject.SetActive(isShow);
             }
+            //否则什么也不做
         }
         else
         {
