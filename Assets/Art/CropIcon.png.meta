@@ -1,0 +1,2585 @@
+fileFormatVersion: 2
+guid: 54ce26246ad88a840853fd97e0f7ad9b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7444915242099724967
+    second: CropIcon_0
+  - first:
+      213: 4296116997330515774
+    second: CropIcon_1
+  - first:
+      213: 2580399831625689716
+    second: CropIcon_2
+  - first:
+      213: -7674479983508186491
+    second: CropIcon_3
+  - first:
+      213: 5902721279563340479
+    second: CropIcon_4
+  - first:
+      213: 1618616181061074351
+    second: CropIcon_5
+  - first:
+      213: 6268459943655125308
+    second: CropIcon_6
+  - first:
+      213: -4173460787651802069
+    second: CropIcon_7
+  - first:
+      213: 1750808739221577653
+    second: CropIcon_8
+  - first:
+      213: -4798012349390773960
+    second: CropIcon_9
+  - first:
+      213: -4308786640342412444
+    second: CropIcon_10
+  - first:
+      213: -17469059555715347
+    second: CropIcon_11
+  - first:
+      213: -1134051110066118306
+    second: CropIcon_12
+  - first:
+      213: -4595411790635607164
+    second: CropIcon_13
+  - first:
+      213: 4412906730218767542
+    second: CropIcon_14
+  - first:
+      213: 5740168671119870345
+    second: CropIcon_15
+  - first:
+      213: -1374484140943562532
+    second: CropIcon_16
+  - first:
+      213: 7965813981405828914
+    second: CropIcon_17
+  - first:
+      213: 1792049656553424254
+    second: CropIcon_18
+  - first:
+      213: -5911724753806940008
+    second: CropIcon_19
+  - first:
+      213: 1793277763766443672
+    second: CropIcon_20
+  - first:
+      213: 9211389573678496328
+    second: CropIcon_21
+  - first:
+      213: -5129126561737460460
+    second: CropIcon_22
+  - first:
+      213: 4692097846763908865
+    second: CropIcon_23
+  - first:
+      213: -6076926510359609331
+    second: CropIcon_24
+  - first:
+      213: 5424224333103659136
+    second: CropIcon_25
+  - first:
+      213: -8854653850657375709
+    second: CropIcon_26
+  - first:
+      213: 6644062672862032298
+    second: CropIcon_27
+  - first:
+      213: 7309188272502492358
+    second: CropIcon_28
+  - first:
+      213: -7128235939533294639
+    second: CropIcon_29
+  - first:
+      213: 1822364813009190414
+    second: CropIcon_30
+  - first:
+      213: -5086270868355651249
+    second: CropIcon_31
+  - first:
+      213: -3251921008460140297
+    second: CropIcon_32
+  - first:
+      213: -2970137971998080161
+    second: CropIcon_33
+  - first:
+      213: 555024431046718116
+    second: CropIcon_34
+  - first:
+      213: 7728638023214232551
+    second: CropIcon_35
+  - first:
+      213: 7873421674293871004
+    second: CropIcon_36
+  - first:
+      213: -8504027359296630586
+    second: CropIcon_37
+  - first:
+      213: -1864085604432080277
+    second: CropIcon_38
+  - first:
+      213: 5574802859323475680
+    second: CropIcon_39
+  - first:
+      213: 1085639624356611557
+    second: CropIcon_40
+  - first:
+      213: 7603900373259065686
+    second: CropIcon_41
+  - first:
+      213: -6246895856772235959
+    second: CropIcon_42
+  - first:
+      213: 4857066859808713870
+    second: CropIcon_43
+  - first:
+      213: 5745343909134049620
+    second: CropIcon_44
+  - first:
+      213: -4961678430988674515
+    second: CropIcon_45
+  - first:
+      213: 3352428230251571202
+    second: CropIcon_46
+  - first:
+      213: -7151819076261409161
+    second: CropIcon_47
+  - first:
+      213: 9112325695968740894
+    second: CropIcon_48
+  - first:
+      213: -7294550415253164914
+    second: CropIcon_49
+  - first:
+      213: 1132041500259459224
+    second: CropIcon_50
+  - first:
+      213: -6509916882619849939
+    second: CropIcon_51
+  - first:
+      213: -281078349980838595
+    second: CropIcon_52
+  - first:
+      213: 6857855195165569862
+    second: CropIcon_53
+  - first:
+      213: 8128431027320134146
+    second: CropIcon_54
+  - first:
+      213: 3461538353735332694
+    second: CropIcon_55
+  - first:
+      213: 5120517208104299090
+    second: CropIcon_56
+  - first:
+      213: 999303839765442355
+    second: CropIcon_57
+  - first:
+      213: 6605369101202295368
+    second: CropIcon_58
+  - first:
+      213: -4125812247905435564
+    second: CropIcon_59
+  - first:
+      213: -6925094584678568539
+    second: CropIcon_60
+  - first:
+      213: -993364909770168413
+    second: CropIcon_61
+  - first:
+      213: -2129266517258459604
+    second: CropIcon_62
+  - first:
+      213: 6011372334207594578
+    second: CropIcon_63
+  - first:
+      213: -7142649335874923922
+    second: CropIcon_64
+  - first:
+      213: -6146599347605690515
+    second: CropIcon_65
+  - first:
+      213: -7221571702560735400
+    second: CropIcon_66
+  - first:
+      213: -1490183842670781350
+    second: CropIcon_67
+  - first:
+      213: -242462100494673674
+    second: CropIcon_68
+  - first:
+      213: -7022983450643486410
+    second: CropIcon_69
+  - first:
+      213: -1660582063424840273
+    second: CropIcon_70
+  - first:
+      213: -921407472091326131
+    second: CropIcon_71
+  - first:
+      213: -8960975510816552607
+    second: CropIcon_72
+  - first:
+      213: -4576357240878482391
+    second: CropIcon_73
+  - first:
+      213: -2239696130098452051
+    second: CropIcon_74
+  - first:
+      213: -6199644651336593926
+    second: CropIcon_75
+  - first:
+      213: 5733404587793469495
+    second: CropIcon_76
+  - first:
+      213: 7367243972621145783
+    second: CropIcon_77
+  - first:
+      213: -2547941421853123504
+    second: CropIcon_78
+  - first:
+      213: -3673311096829337843
+    second: CropIcon_79
+  - first:
+      213: -1201573423906873779
+    second: CropIcon_80
+  - first:
+      213: -8165514695544068285
+    second: CropIcon_81
+  - first:
+      213: -5369118655574570766
+    second: CropIcon_82
+  - first:
+      213: -1222863006782485878
+    second: CropIcon_83
+  - first:
+      213: -8196361655495565733
+    second: CropIcon_84
+  - first:
+      213: -8062470486143654434
+    second: CropIcon_85
+  - first:
+      213: 1051061254446090150
+    second: CropIcon_86
+  - first:
+      213: 5876451387312567722
+    second: CropIcon_87
+  - first:
+      213: 8285073086946225732
+    second: CropIcon_88
+  - first:
+      213: -8151214652498311525
+    second: CropIcon_89
+  - first:
+      213: 8830956722313937636
+    second: CropIcon_90
+  - first:
+      213: -3583535478234549881
+    second: CropIcon_91
+  - first:
+      213: 3979000173182152314
+    second: CropIcon_92
+  - first:
+      213: -4693230235622041526
+    second: CropIcon_93
+  - first:
+      213: 2915130003627162335
+    second: CropIcon_94
+  - first:
+      213: -8238276213177483837
+    second: CropIcon_95
+  - first:
+      213: 1327671932407563506
+    second: CropIcon_96
+  - first:
+      213: 4681162319755635893
+    second: CropIcon_97
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CropIcon_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 870
+        width: 186
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a2de34c7f6a15760800000000000000
+      internalID: 7444915242099724967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_1
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 882
+        width: 161
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e373763b5afde9b30800000000000000
+      internalID: 4296116997330515774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_2
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 891
+        width: 165
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ae68ea9fb6fc320800000000000000
+      internalID: 2580399831625689716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_3
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 921
+        width: 186
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a162bbd15ce7590800000000000000
+      internalID: -7674479983508186491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_4
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 939
+        width: 57
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba1384dabdaae150800000000000000
+      internalID: 5902721279563340479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_5
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 870
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad38d347da767610800000000000000
+      internalID: 1618616181061074351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_6
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 729
+        width: 115
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3134566b1b0ef650800000000000000
+      internalID: 6268459943655125308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_7
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 741
+        width: 113
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c0efb8683e416c0800000000000000
+      internalID: -4173460787651802069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_8
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 830
+        width: 45
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf93faa54f1c4810800000000000000
+      internalID: 1750808739221577653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_9
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 811
+        width: 158
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83120ae60390a6db0800000000000000
+      internalID: -4798012349390773960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_10
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 850
+        width: 89
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4631179216d1434c0800000000000000
+      internalID: -4308786640342412444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_11
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 719
+        width: 161
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de61f9e9bffe1cff0800000000000000
+      internalID: -17469059555715347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_12
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 720
+        width: 74
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e512f5b168a0340f0800000000000000
+      internalID: -1134051110066118306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_13
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 729
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48bd58ee251d930c0800000000000000
+      internalID: -4595411790635607164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_14
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 721
+        width: 134
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4ce916a4bcd3d30800000000000000
+      internalID: 4412906730218767542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_15
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 692
+        width: 71
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9890de06efc29af40800000000000000
+      internalID: 5740168671119870345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_16
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 714
+        width: 82
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8a6a5c4f9dcece0800000000000000
+      internalID: -1374484140943562532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_17
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 550
+        width: 132
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 237d8848c914c8e60800000000000000
+      internalID: 7965813981405828914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_18
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 561
+        width: 110
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e754abefaa3aed810800000000000000
+      internalID: 1792049656553424254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_19
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 584
+        width: 107
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898247778a555fda0800000000000000
+      internalID: -5911724753806940008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_20
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 588
+        width: 56
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ed7ecff9003e810800000000000000
+      internalID: 1793277763766443672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_21
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 585
+        width: 107
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84af7d2630e65df70800000000000000
+      internalID: 9211389573678496328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_22
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 587
+        width: 73
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4153e9f319ea1d8b0800000000000000
+      internalID: -5129126561737460460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_23
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 708
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10fecbfb12ead1140800000000000000
+      internalID: 4692097846763908865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_24
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 586
+        width: 72
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d008cd7298b6aaba0800000000000000
+      internalID: -6076926510359609331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_25
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 696
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0887cacca47b64b40800000000000000
+      internalID: 5424224333103659136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_26
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 587
+        width: 82
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ab58e9c33fd1580800000000000000
+      internalID: -8854653850657375709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_27
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 550
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1bf599cc3743c50800000000000000
+      internalID: 6644062672862032298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_28
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 550
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc46f212047f6560800000000000000
+      internalID: 7309188272502492358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_29
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 550
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d3f1f41e2b631d90800000000000000
+      internalID: -7128235939533294639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_30
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 550
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e759264275a4910800000000000000
+      internalID: 1822364813009190414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_31
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 404
+        width: 82
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f496e3ce79fe969b0800000000000000
+      internalID: -5086270868355651249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_32
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 439
+        width: 72
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f07a1d721bded2d0800000000000000
+      internalID: -3251921008460140297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_33
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 447
+        width: 55
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53c72d3043f7c6d0800000000000000
+      internalID: -2970137971998080161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_34
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 452
+        width: 84
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a2f33687c7d3b700800000000000000
+      internalID: 555024431046718116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_35
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 461
+        width: 47
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3f2438553a14b60800000000000000
+      internalID: 7728638023214232551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_36
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 490
+        width: 101
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c91c52f2c43044d60800000000000000
+      internalID: 7873421674293871004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_37
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 508
+        width: 116
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0dbe84c20abf980800000000000000
+      internalID: -8504027359296630586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_38
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 354
+        width: 99
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6218e4e4007126e0800000000000000
+      internalID: -1864085604432080277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_39
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 382
+        width: 95
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e6cecaf9adad5d40800000000000000
+      internalID: 5574802859323475680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_40
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 294
+        width: 62
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e54dd38c77f01f00800000000000000
+      internalID: 1085639624356611557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_41
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 316
+        width: 71
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 659119f2a1b768960800000000000000
+      internalID: 7603900373259065686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_42
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 334
+        width: 63
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d3b34d0519e49a0800000000000000
+      internalID: -6246895856772235959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_43
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 362
+        width: 39
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c683d3394c76340800000000000000
+      internalID: 4857066859808713870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_44
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 392
+        width: 101
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451a36068df8bbf40800000000000000
+      internalID: 5745343909134049620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_45
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 430
+        width: 116
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2ad33f41c3942bb0800000000000000
+      internalID: -4961678430988674515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_46
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 214
+        width: 96
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 208e227a6b7368e20800000000000000
+      internalID: 3352428230251571202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_47
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 249
+        width: 97
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e839d2172afbc90800000000000000
+      internalID: -7151819076261409161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_48
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 326
+        width: 105
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1681e9f0fb757e70800000000000000
+      internalID: 9112325695968740894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_49
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 360
+        width: 114
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c28a6ab0d84ca90800000000000000
+      internalID: -7294550415253164914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_50
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 165
+        width: 100
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89027f52fb1d5bf00800000000000000
+      internalID: 1132041500259459224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_51
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 332
+        width: 39
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d232026161128a5a0800000000000000
+      internalID: -6509916882619849939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_52
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 309
+        width: 110
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d35d65bdab8691cf0800000000000000
+      internalID: -281078349980838595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_53
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 251
+        width: 67
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64339ec27fefb2f50800000000000000
+      internalID: 6857855195165569862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_54
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 240
+        width: 90
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20a1eacf3fcfdc070800000000000000
+      internalID: 8128431027320134146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_55
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 309
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 653f8ceeacad90030800000000000000
+      internalID: 3461538353735332694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_56
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 316
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ae457654bbf0740800000000000000
+      internalID: 5120517208104299090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_57
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 307
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f27e73c8d3edd00800000000000000
+      internalID: 999303839765442355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_58
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 250
+        width: 90
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a0187633cfaab50800000000000000
+      internalID: 6605369101202295368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_59
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 249
+        width: 74
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45004a9be9b2eb6c0800000000000000
+      internalID: -4125812247905435564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_60
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 257
+        width: 79
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ada04c7a2f15ef90800000000000000
+      internalID: -6925094584678568539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_61
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 240
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a7afcca0ebd632f0800000000000000
+      internalID: -993364909770168413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_62
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 240
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c262da642635372e0800000000000000
+      internalID: -2129266517258459604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_63
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 248
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250fd01d94fac6350800000000000000
+      internalID: 6011372334207594578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_64
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 193
+        width: 47
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e62defbb54630ec90800000000000000
+      internalID: -7142649335874923922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_65
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 240
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d67a05d9574e2baa0800000000000000
+      internalID: -6146599347605690515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_66
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 236
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85fbadc4cc2d7cb90800000000000000
+      internalID: -7221571702560735400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_67
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 96
+        width: 100
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5cd49fb0bdc15be0800000000000000
+      internalID: -1490183842670781350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_68
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 129
+        width: 52
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f81584110a92acf0800000000000000
+      internalID: -242462100494673674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_69
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 144
+        width: 77
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 639a2f0d2c9598e90800000000000000
+      internalID: -7022983450643486410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_70
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 144
+        width: 64
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad5d25596d64f8e0800000000000000
+      internalID: -1660582063424840273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_71
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 50
+        width: 110
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d491b9439c08633f0800000000000000
+      internalID: -921407472091326131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_72
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 172
+        width: 78
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1690ecc004834a380800000000000000
+      internalID: -8960975510816552607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_73
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 173
+        width: 48
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92cb62406538d70c0800000000000000
+      internalID: -4576357240878482391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_74
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 197
+        width: 59
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da92aa07c300be0e0800000000000000
+      internalID: -2239696130098452051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_75
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 4
+        width: 109
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd8e67690076f9a0800000000000000
+      internalID: -6199644651336593926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_76
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 86
+        width: 41
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73056018815219f40800000000000000
+      internalID: 5733404587793469495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_77
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 102
+        width: 41
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b698b91c55bd3660800000000000000
+      internalID: 7367243972621145783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_78
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 116
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05cd0f1c6c4e3acd0800000000000000
+      internalID: -2547941421853123504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_79
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 137
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f9cfbf407c50dc0800000000000000
+      internalID: -3673311096829337843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_80
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 157
+        width: 51
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e1b705657235fe0800000000000000
+      internalID: -1201573423906873779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_81
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 96
+        width: 37
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3472ddba5a34eae80800000000000000
+      internalID: -8165514695544068285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_82
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 81
+        width: 105
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f80e81970f0d75b0800000000000000
+      internalID: -5369118655574570766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_83
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 81
+        width: 48
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8a83c70394870fe0800000000000000
+      internalID: -1222863006782485878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_84
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 81
+        width: 51
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5edd81208ca04e80800000000000000
+      internalID: -8196361655495565733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_85
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 93
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed526554fc95c1090800000000000000
+      internalID: -8062470486143654434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_86
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 113
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a78f6464ae169e00800000000000000
+      internalID: 1051061254446090150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_87
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 3
+        width: 129
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa5fd98e6695d8150800000000000000
+      internalID: 5876451387312567722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_88
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 81
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e249d831e7af270800000000000000
+      internalID: 8285073086946225732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_89
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 73
+        width: 42
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9601e5e57111ee80800000000000000
+      internalID: -8151214652498311525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_90
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 4
+        width: 113
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2ce5cb95cdd8a70800000000000000
+      internalID: 8830956722313937636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_91
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 2
+        width: 85
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 781f1db0879b44ec0800000000000000
+      internalID: -3583535478234549881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_92
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 4
+        width: 67
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e6dbb639f383730800000000000000
+      internalID: 3979000173182152314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_93
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 5
+        width: 102
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4810ac67fb4edeb0800000000000000
+      internalID: -4693230235622041526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_94
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 30
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdab7441b4f947820800000000000000
+      internalID: 2915130003627162335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_95
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 27
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd7100be63cbad80800000000000000
+      internalID: -8238276213177483837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_96
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 39
+        width: 38
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4c8659696dc6210800000000000000
+      internalID: 1327671932407563506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CropIcon_97
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 2
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc6af4f354d6f040800000000000000
+      internalID: 4681162319755635893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      CropIcon_15: 5740168671119870345
+      CropIcon_49: -7294550415253164914
+      CropIcon_90: 8830956722313937636
+      CropIcon_23: 4692097846763908865
+      CropIcon_47: -7151819076261409161
+      CropIcon_86: 1051061254446090150
+      CropIcon_6: 6268459943655125308
+      CropIcon_11: -17469059555715347
+      CropIcon_45: -4961678430988674515
+      CropIcon_74: -2239696130098452051
+      CropIcon_2: 2580399831625689716
+      CropIcon_38: -1864085604432080277
+      CropIcon_72: -8960975510816552607
+      CropIcon_59: -4125812247905435564
+      CropIcon_79: -3673311096829337843
+      CropIcon_22: -5129126561737460460
+      CropIcon_46: 3352428230251571202
+      CropIcon_39: 5574802859323475680
+      CropIcon_66: -7221571702560735400
+      CropIcon_7: -4173460787651802069
+      CropIcon_65: -6146599347605690515
+      CropIcon_14: 4412906730218767542
+      CropIcon_85: -8062470486143654434
+      CropIcon_44: 5745343909134049620
+      CropIcon_50: 1132041500259459224
+      CropIcon_12: -1134051110066118306
+      CropIcon_29: -7128235939533294639
+      CropIcon_32: -3251921008460140297
+      CropIcon_42: -6246895856772235959
+      CropIcon_76: 5733404587793469495
+      CropIcon_60: -6925094584678568539
+      CropIcon_70: -1660582063424840273
+      CropIcon_43: 4857066859808713870
+      CropIcon_95: -8238276213177483837
+      CropIcon_51: -6509916882619849939
+      CropIcon_9: -4798012349390773960
+      CropIcon_75: -6199644651336593926
+      CropIcon_80: -1201573423906873779
+      CropIcon_34: 555024431046718116
+      CropIcon_48: 9112325695968740894
+      CropIcon_58: 6605369101202295368
+      CropIcon_62: -2129266517258459604
+      CropIcon_3: -7674479983508186491
+      CropIcon_55: 3461538353735332694
+      CropIcon_91: -3583535478234549881
+      CropIcon_41: 7603900373259065686
+      CropIcon_10: -4308786640342412444
+      CropIcon_1: 4296116997330515774
+      CropIcon_93: -4693230235622041526
+      CropIcon_26: -8854653850657375709
+      CropIcon_24: -6076926510359609331
+      CropIcon_4: 5902721279563340479
+      CropIcon_83: -1222863006782485878
+      CropIcon_54: 8128431027320134146
+      CropIcon_61: -993364909770168413
+      CropIcon_56: 5120517208104299090
+      CropIcon_63: 6011372334207594578
+      CropIcon_78: -2547941421853123504
+      CropIcon_27: 6644062672862032298
+      CropIcon_81: -8165514695544068285
+      CropIcon_97: 4681162319755635893
+      CropIcon_21: 9211389573678496328
+      CropIcon_53: 6857855195165569862
+      CropIcon_57: 999303839765442355
+      CropIcon_68: -242462100494673674
+      CropIcon_82: -5369118655574570766
+      CropIcon_8: 1750808739221577653
+      CropIcon_28: 7309188272502492358
+      CropIcon_77: 7367243972621145783
+      CropIcon_17: 7965813981405828914
+      CropIcon_35: 7728638023214232551
+      CropIcon_96: 1327671932407563506
+      CropIcon_18: 1792049656553424254
+      CropIcon_40: 1085639624356611557
+      CropIcon_20: 1793277763766443672
+      CropIcon_16: -1374484140943562532
+      CropIcon_67: -1490183842670781350
+      CropIcon_5: 1618616181061074351
+      CropIcon_94: 2915130003627162335
+      CropIcon_0: 7444915242099724967
+      CropIcon_52: -281078349980838595
+      CropIcon_37: -8504027359296630586
+      CropIcon_19: -5911724753806940008
+      CropIcon_13: -4595411790635607164
+      CropIcon_92: 3979000173182152314
+      CropIcon_89: -8151214652498311525
+      CropIcon_31: -5086270868355651249
+      CropIcon_87: 5876451387312567722
+      CropIcon_73: -4576357240878482391
+      CropIcon_25: 5424224333103659136
+      CropIcon_36: 7873421674293871004
+      CropIcon_71: -921407472091326131
+      CropIcon_69: -7022983450643486410
+      CropIcon_84: -8196361655495565733
+      CropIcon_30: 1822364813009190414
+      CropIcon_64: -7142649335874923922
+      CropIcon_33: -2970137971998080161
+      CropIcon_88: 8285073086946225732
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

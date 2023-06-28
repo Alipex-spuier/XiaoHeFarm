@@ -1,0 +1,45 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class UI_InventoryPanel : UI_ListPanelBase<UI_InventoryPanel>
+{
+    private Dictionary<string, int> cropDic = new Dictionary<string, int>();
+
+    private List<UI_InventoryItem> itemList = new List<UI_InventoryItem>();
+
+    protected override void OnStart()
+    {
+        // 显示仓库中的所有物品列表以及对应的数量
+        UpdateItems();
+    }
+
+    private void UpdateItems()
+    {
+        for (int i = 0; i < itemList.Count; i++)
+        {
+            Destroy(itemList[i].gameObject);
+        }
+        itemList.Clear();
+        foreach (var item in cropDic)
+        {
+            UI_InventoryItem inventoryItem = Instantiate(prefab_Item, parent_Item).GetComponent<UI_InventoryItem>();
+            inventoryItem.Init(item.Key, item.Value);
+            itemList.Add(inventoryItem);
+        }
+    }
+
+    public void AddCrop(string cropName,int count)
+    {
+        if (cropDic.ContainsKey(cropName))
+        {
+            cropDic[cropName] += count;
+        }
+        else
+        {
+            cropDic.Add(cropName, count);
+        }
+        UpdateItems();
+    }
+
+}
