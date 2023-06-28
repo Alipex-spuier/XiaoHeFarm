@@ -24,8 +24,10 @@ public class ChatScript : MonoBehaviour
     [SerializeField]private Toggle m_PlayToggle;
     //gpt-3.5-turbo
     [SerializeField] public GptTurboScript m_GptTurboScript;
+    //promot_Useful
+    [SerializeField] private string m_lan = "使用中文回答";
 
-   //发送信息
+    //发送信息
     public void SendData()
     {
         if(m_InputWord.text.Equals(""))
@@ -225,35 +227,5 @@ public class ChatScript : MonoBehaviour
 
 
     #endregion
-
-
-    #region 切换妹子
-    //Lo娘
-    [SerializeField]private GameObject m_LoGirl;
-    [SerializeField]private GameObject m_Girl;
-    [SerializeField]private string m_lan="使用中文回答";
-    //
-    public void SetLoGirlShowed(GameObject _settingPanel){
-        if(!m_LoGirl.activeSelf)
-        {
-            m_LoGirl.SetActive(true);
-            m_Girl.SetActive(false);
-        }
-
-        _settingPanel.SetActive(false);
-    }
-    //zh-CN-XiaoxiaoNeural
-    public void SetGirlShowed(GameObject _settingPanel){
-        if(!m_Girl.activeSelf)
-        {
-            m_LoGirl.SetActive(false);
-            m_Girl.SetActive(true);
-        }
-
-        _settingPanel.SetActive(false);
-    }
-
-    #endregion
-
 
 }

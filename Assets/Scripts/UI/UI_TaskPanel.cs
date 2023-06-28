@@ -21,7 +21,7 @@ public class UI_TaskPanel : UI_ListPanelBase<UI_TaskPanel>
     //打开任务面板
     public void TaskButtonClick()
     {
-        // 打开建造面板
+        // 打开任务面板
         UIManager.Instance.ShowTaskPanel();
     }
     //测试用
