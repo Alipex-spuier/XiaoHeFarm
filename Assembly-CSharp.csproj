@@ -66,10 +66,13 @@
     <Compile Include="Assets\Scripts\Crop\Crop_Sunflower.cs" />
     <Compile Include="Assets\UnityTechnologies\ParticlePack\Shared\Scripts\ProximityActivate.cs" />
     <Compile Include="Assets\Scripts\UI\UI_ListPanelBase.cs" />
+    <Compile Include="Assets\Scripts\AI\ChatScript.cs" />
     <Compile Include="Assets\Scripts\Camera_C.cs" />
     <Compile Include="Assets\Scripts\UI\UI_ShopPanel.cs" />
     <Compile Include="Assets\Scripts\UI\UI_InventoryItem.cs" />
+    <Compile Include="Assets\Scripts\AI\ChatPrefab.cs" />
     <Compile Include="Assets\Scripts\Build\BaseBuild.cs" />
+    <Compile Include="Assets\Scripts\AI\GptTurboScript.cs" />
     <Compile Include="Assets\Scripts\UI\UI_ShopPanelBase.cs" />
     <Compile Include="Assets\UnityTechnologies\ParticlePack\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Base\Singleton.cs" />
@@ -84,6 +87,8 @@
     <Compile Include="Assets\Scripts\Player_C.cs" />
     <Compile Include="Assets\Scripts\UI\UI_BuildPanel.cs" />
     <Compile Include="Assets\Scripts\UI\UI_MainPanel.cs" />
+    <Compile Include="Assets\Scripts\AI\GetOpenAI.cs" />
+    <Compile Include="Assets\Scripts\SceneSwitcher.cs" />
     <Compile Include="Assets\Scripts\Conf\ShopConf.cs" />
   </ItemGroup>
   <ItemGroup>
