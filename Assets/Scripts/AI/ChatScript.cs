@@ -20,8 +20,8 @@ public class ChatScript : MonoBehaviour
     [SerializeField]private InputField m_InputWord;
     //返回的信息
     [SerializeField]private Text m_TextBack;
-    //播放设置
-    [SerializeField]private Toggle m_PlayToggle;
+/*    //播放设置
+    [SerializeField]private Toggle m_PlayToggle;*/
     //gpt-3.5-turbo
     [SerializeField] public GptTurboScript m_GptTurboScript;
     //promot_Useful
@@ -58,9 +58,6 @@ public class ChatScript : MonoBehaviour
         m_ChatHistory.Add(_postData);
 
         string _msg = m_GptTurboScript.Prompt + m_lan + " " + _postData;
-        //string _msg =m_lan + " " + m_InputWord.text;
-        //发送数据
-        //StartCoroutine (GetPostData (_msg,CallBack));
         StartCoroutine(m_GptTurboScript.GetPostData(_msg, m_OpenAI_Key, CallBack));
 
         //m_InputWord.text = "";
@@ -77,14 +74,6 @@ public class ChatScript : MonoBehaviour
         //开始逐个显示返回的文本
         m_WriteState=true;
         StartCoroutine(SetTextPerWord(_callback));
-
-         //记录聊天
-        m_ChatHistory.Add(_callback);
-
-        if(m_PlayToggle.isOn){
-            StartCoroutine(Speek(_callback));
-        }
-       
 
     }
 
