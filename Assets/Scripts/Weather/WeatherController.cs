@@ -8,6 +8,7 @@ public class WeatherController : MonoBehaviour
 {
     private Dictionary<string, ParticleSystem> allWeather = new Dictionary<string, ParticleSystem>();
     private Dictionary<int, string> randomWeather = new Dictionary<int, string>();
+    private Queue<string> weatherForecast = new Queue<string>();
     private string currentWeather = "normal" ;
     [SerializeField]
     public string CurrentWeather { get => currentWeather; 
@@ -43,9 +44,10 @@ public class WeatherController : MonoBehaviour
             }
         } 
     }
-
+    public static WeatherController Instance { get; private set; }
     private void Awake()
-    {
+    {   
+        Instance = this;
         //取一级子物体，active为false的获取不到
         for(int i=0;i<transform.childCount;i++)
         {
@@ -60,9 +62,10 @@ public class WeatherController : MonoBehaviour
             x.Value.gameObject.SetActive(false);
         }
     }
+
+
     public void SetWeather(string name)
     {
-        Debug.Log(1);
         CurrentWeather = name;
     }
     public string GetWeather()
