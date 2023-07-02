@@ -13,6 +13,7 @@ public enum CropState
     // 成熟，需要采摘
     Ripe
 }
+
 public abstract class CropBase : BaseBuild
 {
     [SerializeField] private string cropName;
@@ -20,6 +21,8 @@ public abstract class CropBase : BaseBuild
     private CropState cropState;
     public GameObject imgHand;
     public GameObject imgSeed;
+    private float waterState;
+    private float growingTime;//植物状态发生变化的时间
     // 等级
     [SerializeField]
     private int lv = -1;
@@ -46,6 +49,12 @@ public abstract class CropBase : BaseBuild
                 //  TODO:待用对象池替代 模型实例化以及销毁        
                 if (model != null) Destroy(model);
                 model = GameObject.Instantiate(lvPrefabs[Lv], transform);
+                if(value == 1)
+                {
+                    MyTimer.Instance.ScheduleAction(5f, UpGrade);
+                    return;
+                }
+
             }
 
         }
@@ -69,13 +78,13 @@ public abstract class CropBase : BaseBuild
                     InitGrow();
                     break;
                 case CropState.Ripe:
-                    StopCoroutine("DoGrow");
                     imgHand.SetActive(true);
                     imgSeed.SetActive(false);
                     break;
             }
         }
     }
+
     private void Start()
     {
         Lv = 0;
@@ -84,20 +93,26 @@ public abstract class CropBase : BaseBuild
     }
     protected override void OnPlaceOver()
     {
+        growingTime = MyTimer.Instance.GetCurrentTime();
         // 默认有种子
         CropState = CropState.Grow;
+        
     }
     private void InitGrow()
     {
-        StopCoroutine("DoGrow");
-        StartCoroutine("DoGrow");
+        DoGrow();
     }
-    IEnumerator DoGrow()
+    private void DoGrow()
     {
         for (int i = 0; i < lvPrefabs.Length; i++)
         {
-            yield return new WaitForSeconds(10);
-            UpGrade();
+            //float currentTime = MyTimer.Instance.GetCurrentTime();
+            //if ((currentTime - growingTime) * 10 >= 50)
+            //{
+            //    UpGrade();
+            //    growingTime = MyTimer.Instance.GetCurrentTime();
+            //}
+            MyTimer.Instance.ScheduleAction(5f, UpGrade);
         }
     }
     // 升级
@@ -150,4 +165,15 @@ public abstract class CropBase : BaseBuild
                 break;
         }
     }
+    private void StopGrowing()
+    {
+
+    }//缺水时停止生长
+    private void Water()
+    {
+        if (waterState <= 50)
+            waterState += 50;
+        else waterState = 100;//加上缺水显示
+    }//浇水
+
 }

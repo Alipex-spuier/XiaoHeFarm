@@ -1,26 +1,24 @@
-using JetBrains.Annotations;
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
-using UnityEngine;
+using System;
 using UnityEngine.Networking;
-
+using UnityEngine;
+using System.Collections;
 
 public class GptTurboScript : MonoBehaviour
 {
+    private string _openAI_Key = "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";
     /// <summary>
     /// api地址
     /// </summary>
-    public string m_ApiUrl = "https://api.openai.com/v1/chat/completions";
+    private string m_ApiUrl = "https://api.openai.com/v1/chat/completions";
     /// <summary>
     /// gpt-3.5-turbo
     /// </summary>
-    public string m_gptModel = "gpt-3.5-turbo";
+    private string m_gptModel = "gpt-3.5-turbo";
     /// <summary>
     /// 缓存对话
     /// </summary>
-    [SerializeField]public List<SendData> m_DataList = new List<SendData>();
+    [SerializeField] private List<SendData> m_DataList = new List<SendData>();
     /// <summary>
     /// AI人设
     /// </summary>
@@ -31,14 +29,15 @@ public class GptTurboScript : MonoBehaviour
         //运行时，添加人设
         m_DataList.Add(new SendData("system", Prompt));
     }
+
     /// <summary>
     /// 调用接口
     /// </summary>
-    /// <param name="_postWord"></param>
-    /// <param name="_openAI_Key"></param>
-    /// <param name="_callback"></param>
+    /// <param name="_postWord">发送的消息</param>
+    /// <param name="_openAI_Key">密钥</param>
+    /// <param name="_callback">GPT的回调</param>
     /// <returns></returns>
-    public IEnumerator GetPostData(string _postWord,string _openAI_Key, System.Action<string> _callback)
+    public IEnumerator GetPostData(string _postWord, System.Action<string> _callback)
     {
         //缓存发送的信息列表
         m_DataList.Add(new SendData("user", _postWord));
@@ -73,16 +72,14 @@ public class GptTurboScript : MonoBehaviour
                     m_DataList.Add(new SendData("assistant", _backMsg));
                     _callback(_backMsg);
                 }
-
             }
         }
-
-
     }
 
     #region 数据包
 
-    [Serializable]public class PostData
+    [Serializable]
+    public class PostData
     {
         public string model;
         public List<SendData> messages;
@@ -94,7 +91,8 @@ public class GptTurboScript : MonoBehaviour
         public string role;
         public string content;
         public SendData() { }
-        public SendData(string _role,string _content) {
+        public SendData(string _role, string _content)
+        {
             role = _role;
             content = _content;
         }
@@ -123,7 +121,4 @@ public class GptTurboScript : MonoBehaviour
     }
 
     #endregion
-
-
 }
-

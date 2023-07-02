@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,11 @@ using UnityEngine.UI;
 
 public class MyTimer : MonoBehaviour
 {
+    private List<float> waitTime = new List<float>();
+    private List<Action> actions = new List<Action>();
+    //private Dictionary<float, Action> scheduledActions = new Dictionary<float, Action>();
+
+
     public static MyTimer Instance;
 
     public delegate void Tick();
@@ -16,18 +22,19 @@ public class MyTimer : MonoBehaviour
     public float time;
     public int day;
 
-    private Dictionary<int,string> weatherForecast = new Dictionary<int,string>();
+
     private void Awake()
     {
         Instance = this;
-        currentTime = transform.Find("Canvas/CurrentTime").GetComponent<Text>();
+        currentTime = GetComponent<Text>();
         day = 1;
         time = 0;
         BeginClock();
     }
     private void FixedUpdate()
     {
-        if (tick != null)
+        //面板打开时暂停时间
+        if (tick != null&& Player_C.Instance.currPanel == null)
         {
             tick();
         }
@@ -37,13 +44,13 @@ public class MyTimer : MonoBehaviour
         return time;
     } 
     //开始计时
-    private void BeginClock()
+    public void BeginClock()
     {
         tick += RunTheClock;
-        SwitchWeather();
+
     }
     //停止计时
-    private void StopClock()
+    public void StopClock()
     {
         tick -= RunTheClock;
     }
@@ -54,43 +61,32 @@ public class MyTimer : MonoBehaviour
         currentTime.text = time.ToString();
         if(time>=oneDay)
         {
-            StopClock();
             day++;
             time = 0;
-
+            //显示结算面板，进行结算
+            UIManager.Instance.ShowDayPanel();
         }
-    }
-    //天气切换
-    private void SwitchWeather()
-    {
-        //前几天都是好天气
-        if (day == 0)
+        // 检查是否有已经到达指定时间的函数需要执行
+        List<float> temp = new List<float>();
+        int k = waitTime.Count;
+        for(int i=0;i<k;i++)
         {
-            WeatherController.Instance.CurrentWeather = "normal";
-        }
-        else
-        {
-            try
+            if (time >= waitTime[i])
             {
-                //如果今天的天气被预报过
-                if (weatherForecast.ContainsKey(day))
-                {
-                    WeatherController.Instance.SetWeather(weatherForecast[day]);
-                }
-            }
-            //否则随机一个天气
-            catch
-            {
-                WeatherController.Instance.SetRandomWeather();
+                actions[i].Invoke(); // 执行函数
+                waitTime.RemoveAt(i);
+                actions.RemoveAt(i);
+                k = waitTime.Count;
             }
         }
+
     }
-    
-    //天气预报
-    private void AddWeatherForecast(int day,string weather)
+    public void ScheduleAction(float delay, Action action)
     {
-        weatherForecast.Add(day, weather);
+        float scheduledTime = GetCurrentTime() + delay;
+        waitTime.Add(scheduledTime);
+        actions.Add(action);
+        //scheduledActions.Add(scheduledTime, action);
     }
 
-    
 }

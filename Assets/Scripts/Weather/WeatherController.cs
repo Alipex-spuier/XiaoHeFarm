@@ -6,41 +6,30 @@ using UnityEngine;
 
 public class WeatherController : MonoBehaviour
 {
-    private Dictionary<string, ParticleSystem> allWeather = new Dictionary<string, ParticleSystem>();
+
+    //对应天气的天空盒
+    public Material[] skyboxes;
+    //当前天空盒索引
+    private int currentSkyboxIndex = 0; 
+    //对应天气的粒子系统
+    private Dictionary<string, WeatherBase> allWeather = new Dictionary<string, WeatherBase>();
     private Dictionary<int, string> randomWeather = new Dictionary<int, string>();
-    private Queue<string> weatherForecast = new Queue<string>();
-    private string currentWeather = "normal" ;
+    private string currentWeather = "普通" ;
+    //天气预报
+    private Dictionary<int, string> weatherForecast = new Dictionary<int, string>();
     [SerializeField]
     public string CurrentWeather { get => currentWeather; 
         set 
         {
-            //切换回普通天气
-            if (value == "normal")
-            {
-                try
-                {
-                    //如果当前不是普通天气
-                    allWeather[currentWeather].Stop(true);
-                    currentWeather = "normal";
-                }
-                catch
-                {
-                    //如果当前是普通天气
-                }
-                return;
-            }
+
             //切换到特殊天气
-            ParticleSystem temp;
+            WeatherBase temp;
             if (allWeather.TryGetValue(value, out temp))
             {
-                //如果此时已有天气，取消当前天气
-                if (currentWeather != null&&currentWeather!="normal")
-                {
-                    allWeather[currentWeather].Stop(true);
-                }
+                allWeather[currentWeather].Stop();
                 currentWeather = value;
                 temp.gameObject.SetActive(true);
-                temp.Play();
+                temp.Begin();
             }
         } 
     }
@@ -52,7 +41,7 @@ public class WeatherController : MonoBehaviour
         for(int i=0;i<transform.childCount;i++)
         {
             string name = transform.GetChild(i).gameObject.name;
-            allWeather.Add(name,transform.GetChild(i).GetComponent<ParticleSystem>());
+            allWeather.Add(name,transform.GetChild(i).GetComponent<WeatherBase>());
             randomWeather.Add(i, name);
         }
         
@@ -61,10 +50,11 @@ public class WeatherController : MonoBehaviour
         {
             x.Value.gameObject.SetActive(false);
         }
+        SetWeather("普通");
     }
 
 
-    public void SetWeather(string name)
+    private void SetWeather(string name)
     {
         CurrentWeather = name;
     }
@@ -72,11 +62,39 @@ public class WeatherController : MonoBehaviour
     {
         return CurrentWeather;
     }
-    public void SetRandomWeather()
+    private void SetRandomWeather()
     {
         System.Random random = new System.Random();
         //取[0,4]的随机数
         int index = random.Next(0, 5);
         CurrentWeather = randomWeather[index];
+    }
+    //天气切换
+    public void SwitchWeather()
+    {
+        //前几天都是好天气
+        if (MyTimer.Instance.day == 0)
+        {
+            CurrentWeather = "普通";
+        }
+        else
+        {
+                //如果今天的天气被预报过
+                if (weatherForecast.ContainsKey(MyTimer.Instance.day))
+                {
+                    SetWeather(weatherForecast[MyTimer.Instance.day]);
+                }
+                //否则随机一个天气
+                else
+                {
+                    SetRandomWeather();
+                }
+        }
+    }
+
+    //天气预报
+    public void AddWeatherForecast(int day, string weather)
+    {
+        weatherForecast.Add(day, weather);
     }
 }

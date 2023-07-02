@@ -4,8 +4,18 @@ using UnityEngine;
 
 public class Camer_C : MonoBehaviour
 {
-    private Camera m_Camera;
-    private GameObject CM_C;
+
+
+    public Camera m_Camera;//第三人称
+    private GameObject mainCamera;
+    public Camera p_Camera;//第一人称
+    private GameObject playerCamera;
+    public Transform  player;
+    public GameObject m_mainPanel;
+    private float mouseX, mouseY;
+    public float mouseSensitivity;
+    private bool isFirstPerson = false;
+    public float xRotation;
     //左右移动
     public float xMove;
     //左右移动边界
@@ -22,17 +32,72 @@ public class Camer_C : MonoBehaviour
     //缩放尺度
     public float scale;
 
+
+
     void Start()
     {
-        m_Camera = GetComponentInChildren<Camera>();
-        CM_C = m_Camera.gameObject;
+        // 初始化时启用第三人称摄像机，禁用第一人称摄像机
+        p_Camera.enabled = false;
+        m_Camera.enabled = true;
+
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        Move();
-        CheckBorder();
+        // 检测键盘上的"v"键是否被按下
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            isFirstPerson = !isFirstPerson;
+            if (isFirstPerson)
+            {
+                // 切换为第一人称
+                player.gameObject.SetActive(true);
+                p_Camera.enabled = true;
+                m_Camera.enabled = false;
+                m_mainPanel.SetActive(false);
+            }
+            else
+            {
+                // 切换为第三人称
+                //p_Camera.enabled = false;
+                m_Camera.enabled = true;
+                m_mainPanel.SetActive(true);
+                transform.localRotation = Quaternion.Euler(45, 0, 0);
+                player.gameObject.SetActive(false);
+            }
+        }
+        // 根据当前人称执行对应的方法
+        if (isFirstPerson)
+        {
+            playerMove();
+        }
+        else
+        {
+            Move();
+            CheckBorder();
+        }
+    }
+
+
+
+    private void playerMove()
+    {
+        mouseX=Input.GetAxisRaw("Mouse X")*mouseSensitivity*Time.deltaTime;
+        mouseY=Input.GetAxisRaw("Mouse Y")*mouseSensitivity*Time.deltaTime;
+
+        p_Camera.transform.Rotate(-mouseY, 0, 0);
+        //水平是0，往上一点就到了360，往下一点就到了1
+        if(p_Camera.transform.localEulerAngles.x<300&& p_Camera.transform.localEulerAngles.x > 200)
+        {
+            p_Camera.transform.localEulerAngles = new Vector3(300, 0, 0);
+        }
+        if(p_Camera.transform.localEulerAngles.x>50&& p_Camera.transform.localEulerAngles.x < 200)
+        {
+            p_Camera.transform.localEulerAngles = new Vector3(50, 0, 0);
+        }
+
+
+        player.Rotate(Vector3.up * mouseX);
     }
     private void Move()
     {

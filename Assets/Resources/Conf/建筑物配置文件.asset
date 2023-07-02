@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShopConfItems:
   - Name: "\u5546\u5E97"
-    MaxCount: 1
-    Gold: 10
+    MaxCount: 50
+    Gold: 50
     Prefab: {fileID: 3822211868567659714, guid: a8ecdcf3f46cbc2438f21a97de961950,
       type: 3}
   - Name: "\u4ED3\u5E93"

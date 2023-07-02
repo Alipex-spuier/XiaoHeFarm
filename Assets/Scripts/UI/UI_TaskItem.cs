@@ -72,7 +72,6 @@ public class UI_TaskItem : MonoBehaviour
     //显示任务描述
     public void ShowDetail()
     {
-        Debug.Log(1);
         UI_TaskPanel.Instance.ShowDescription(taskDescription);
     }
     //提交任务

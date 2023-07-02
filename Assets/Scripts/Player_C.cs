@@ -5,7 +5,17 @@ using UnityEngine;
 public class Player_C : MonoBehaviour
 {
     public static Player_C Instance;
-
+    private CharacterController characterController;
+    public float movespeed;
+    public float jumpSpeed;
+    private float horizontalMove,verticalMove;
+    private Vector3 dir;
+    public float gravity;
+    private Vector3 velocity;
+    public Transform groundCheck;
+    public float checkRadius;
+    public LayerMask groundLayer;
+    public bool isGround ;
     // 全部建筑物
     private List<BaseBuild> buildList = new List<BaseBuild>();
 
@@ -31,11 +41,26 @@ public class Player_C : MonoBehaviour
     }
     private void Start()
     {
-
+        characterController = GetComponent<CharacterController>();
         Gold = 500;
     }
     void Update()
-    {
+    {   
+        isGround=Physics.CheckSphere(groundCheck.position,checkRadius,groundLayer);
+        if (isGround &&velocity.y<0)
+        {
+            velocity.y = 0f;
+        }
+        horizontalMove = Input.GetAxisRaw("Horizontal")*movespeed;
+        verticalMove = Input.GetAxisRaw("Vertical")*movespeed;
+        dir=transform.forward*verticalMove+transform.right*horizontalMove;
+        characterController.Move(dir * Time.deltaTime);
+        if (Input.GetButtonDown("Jump")&&isGround)
+        {
+            velocity.y = jumpSpeed;
+        }
+        velocity.y-=gravity*Time.deltaTime;
+        characterController.Move(velocity*Time.deltaTime);
         if (tempBuild!=null)
         {
             if (Input.GetMouseButtonDown(1))
@@ -158,4 +183,6 @@ public class Player_C : MonoBehaviour
         }
 
     }
+
+
 }

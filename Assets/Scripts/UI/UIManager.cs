@@ -16,16 +16,19 @@ public class UIManager : MonoBehaviour
     private UI_MainPanel mainPanel;
     private UI_BuildPanel buildPanel;
     private UI_TaskPanel taskPanel;
+    private UI_DayPanel dayPanel;
 
     private void Awake()
     {
         Instance = this;
-    }
-    void Start()
-    {
         mainPanel = transform.Find("MainPanel").GetComponent<UI_MainPanel>();
         buildPanel = transform.Find("BuildPanel").GetComponent<UI_BuildPanel>();
         taskPanel = transform.Find("TaskPanel").GetComponent<UI_TaskPanel>();
+        dayPanel = transform.Find("DayPanel").GetComponent<UI_DayPanel>();
+    }
+    void Start()
+    {
+
     }
 
 
@@ -52,8 +55,14 @@ public class UIManager : MonoBehaviour
         UITipsAnimator.SetTrigger("ShowUITips");
     }
 
-    internal void ShowTaskPanel()
+    public void ShowTaskPanel()
     {
         taskPanel.SetActive(true);
     }
+    public void ShowDayPanel()
+    {
+        dayPanel.SetActive(true);
+    }
+
+
 }

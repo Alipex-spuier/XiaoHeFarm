@@ -27,7 +27,7 @@ public class UI_ListPanelBase<T> : Singleton<T>, IPanel where T: UI_ListPanelBas
 
 
     // 关闭按钮点击
-    protected void CloseButtonClick()
+    protected virtual void CloseButtonClick()
     {
         Player_C.Instance.currPanel = null;
         // 关闭自身

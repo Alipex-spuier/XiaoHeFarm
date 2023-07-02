@@ -1,238 +1,85 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class NPC_Controller : MonoBehaviour
 {
-    /*
-        private enum ControlMode
-        {
-            Tank,
-            Direct
-        }
 
-        [SerializeField] private float m_moveSpeed = 2;
-        [SerializeField] private float m_turnSpeed = 200;
-        [SerializeField] private float m_jumpForce = 4;
+    private delegate void FindWay();
+    private event FindWay findWay;
+    
 
-        [SerializeField] private Animator m_animator = null;
-        [SerializeField] private Rigidbody m_rigidBody = null;
-
-        [SerializeField] private ControlMode m_controlMode = ControlMode.Direct;
-
-        private float m_currentV = 0;
-        private float m_currentH = 0;
-
-        private readonly float m_interpolation = 10;
-        private readonly float m_walkScale = 0.33f;
-        private readonly float m_backwardsWalkScale = 0.16f;
-        private readonly float m_backwardRunScale = 0.66f;
-
-        private bool m_wasGrounded;
-        private Vector3 m_currentDirection = Vector3.zero;
-
-        private float m_jumpTimeStamp = 0;
-        private float m_minJumpInterval = 0.25f;
-        private bool m_jumpInput = false;
-
-        private bool m_isGrounded;
-
-        private List<Collider> m_collisions = new List<Collider>();
-
-        private void Awake()
-        {
-            if (!m_animator) { gameObject.GetComponent<Animator>(); }
-            if (!m_rigidBody) { gameObject.GetComponent<Animator>(); }
-        }
-
-        private void OnCollisionEnter(Collision collision)
-        {
-            ContactPoint[] contactPoints = collision.contacts;
-            for (int i = 0; i < contactPoints.Length; i++)
-            {
-                if (Vector3.Dot(contactPoints[i].normal, Vector3.up) > 0.5f)
-                {
-                    if (!m_collisions.Contains(collision.collider))
-                    {
-                        m_collisions.Add(collision.collider);
-                    }
-                    m_isGrounded = true;
-                }
-            }
-        }
-
-        private void OnCollisionStay(Collision collision)
-        {
-            ContactPoint[] contactPoints = collision.contacts;
-            bool validSurfaceNormal = false;
-            for (int i = 0; i < contactPoints.Length; i++)
-            {
-                if (Vector3.Dot(contactPoints[i].normal, Vector3.up) > 0.5f)
-                {
-                    validSurfaceNormal = true; break;
-                }
-            }
-
-            if (validSurfaceNormal)
-            {
-                m_isGrounded = true;
-                if (!m_collisions.Contains(collision.collider))
-                {
-                    m_collisions.Add(collision.collider);
-                }
-            }
-            else
-            {
-                if (m_collisions.Contains(collision.collider))
-                {
-                    m_collisions.Remove(collision.collider);
-                }
-                if (m_collisions.Count == 0) { m_isGrounded = false; }
-            }
-        }
-
-        private void OnCollisionExit(Collision collision)
-        {
-            if (m_collisions.Contains(collision.collider))
-            {
-                m_collisions.Remove(collision.collider);
-            }
-            if (m_collisions.Count == 0) { m_isGrounded = false; }
-        }
-
-        private void Update()
-        {
-            if (!m_jumpInput && Input.GetKey(KeyCode.Space))
-            {
-                m_jumpInput = true;
-            }
-        }
-
-        private void FixedUpdate()
-        {
-            m_animator.SetBool("Grounded", m_isGrounded);
-
-            switch (m_controlMode)
-            {
-                case ControlMode.Direct:
-                    DirectUpdate();
-                    break;
-
-                case ControlMode.Tank:
-                    TankUpdate();
-                    break;
-
-                default:
-                    Debug.LogError("Unsupported state");
-                    break;
-            }
-
-            m_wasGrounded = m_isGrounded;
-            m_jumpInput = false;
-        }
-
-        private void TankUpdate()
-        {
-            //
-            float v = Input.GetAxis("Vertical");
-            float h = Input.GetAxis("Horizontal");
-
-            bool walk = Input.GetKey(KeyCode.LeftShift);
-
-            if (v < 0)
-            {
-                if (walk) { v *= m_backwardsWalkScale; }
-                else { v *= m_backwardRunScale; }
-            }
-            else if (walk)
-            {
-                v *= m_walkScale;
-            }
-
-            m_currentV = Mathf.Lerp(m_currentV, v, Time.deltaTime * m_interpolation);
-            m_currentH = Mathf.Lerp(m_currentH, h, Time.deltaTime * m_interpolation);
-
-            transform.position += transform.forward * m_currentV * m_moveSpeed * Time.deltaTime;
-            transform.Rotate(0, m_currentH * m_turnSpeed * Time.deltaTime, 0);
-
-            m_animator.SetFloat("MoveSpeed", m_currentV);
-
-            JumpingAndLanding();
-        }
-
-        private void DirectUpdate()
-        {
-            float v = Input.GetAxis("Vertical");
-            float h = Input.GetAxis("Horizontal");
-
-            Transform camera = Camera.main.transform;
-
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                v *= m_walkScale;
-                h *= m_walkScale;
-            }
-
-            m_currentV = Mathf.Lerp(m_currentV, v, Time.deltaTime * m_interpolation);
-            m_currentH = Mathf.Lerp(m_currentH, h, Time.deltaTime * m_interpolation);
-
-            Vector3 direction = camera.forward * m_currentV + camera.right * m_currentH;
-
-            float directionLength = direction.magnitude;
-            direction.y = 0;
-            direction = direction.normalized * directionLength;
-
-            if (direction != Vector3.zero)
-            {
-                m_currentDirection = Vector3.Slerp(m_currentDirection, direction, Time.deltaTime * m_interpolation);
-
-                transform.rotation = Quaternion.LookRotation(m_currentDirection);
-                transform.position += m_currentDirection * m_moveSpeed * Time.deltaTime;
-
-                m_animator.SetFloat("MoveSpeed", direction.magnitude);
-            }
-
-            JumpingAndLanding();
-        }
-
-        private void JumpingAndLanding()
-        {
-            bool jumpCooldownOver = (Time.time - m_jumpTimeStamp) >= m_minJumpInterval;
-
-            if (jumpCooldownOver && m_isGrounded && m_jumpInput)
-            {
-                m_jumpTimeStamp = Time.time;
-                m_rigidBody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
-            }
-
-            if (!m_wasGrounded && m_isGrounded)
-            {
-                m_animator.SetTrigger("Land");
-            }
-
-            if (!m_isGrounded && m_wasGrounded)
-            {
-                m_animator.SetTrigger("Jump");
-            }
-        }
-    */
-
-    public float wanderRadius = 10f;  // 设置游走半径
-    private NavMeshAgent agent;  // NavMeshAgent组件
-
-    void Start()
+    //设置游走半径
+    public float wanderRadius = 10f;  
+    private NavMeshAgent agent;
+    //计时器
+    private float timer;
+    //寻路间隔
+    private float wanderTimer;
+    //随机器
+    System.Random random = new System.Random();
+    void Awake()
     {
-        agent = GetComponent<NavMeshAgent>();  // 获取NavMeshAgent组件
-        InvokeRepeating("SetRandomDestination", 1f, 5f);  // 每5秒设置一个新的随机目标
+        agent = GetComponent<NavMeshAgent>();
+        timer = 0;
+        wanderTimer = random.Next(1, 10);
+        
+        Begin();
     }
+    private void Update()
+    {
+        if(findWay!= null)
+        {
+            findWay();
+        }
 
+    }
+    public void Begin()
+    {
+        //开始处要调用一次，否则停止后没有目标位置，会卡在Work的第一行
+        SetRandomDestination();
+        findWay += Work;
+    }
+    public void Stop()
+    {
+        findWay -= Work;
+    }
+    public void Work()
+    {
+        //如果走到了目标位置，休息一段时间再运动
+        if (agent.remainingDistance<=agent.stoppingDistance)
+        {
+            Stop();
+            Invoke("Begin", (float)random.Next(5,10));
+            Debug.Log(1);
+            return;
+        } else
+        {
+            //规定时间内没有到达位置，重新移动
+            if (MyTimer.Instance.GetCurrentTime() - timer > wanderTimer)
+            {
+
+                SetRandomDestination();
+                timer = MyTimer.Instance.GetCurrentTime();
+                wanderTimer = random.Next(7, 13);
+            }
+        }
+    }
     void SetRandomDestination()
     {
-        Vector3 randomDirection = Random.insideUnitSphere * wanderRadius;  // 在指定半径内选择一个随机点
-        randomDirection += transform.position;  // 将这个随机点相对于当前位置
-        NavMeshHit hit;
-        NavMesh.SamplePosition(randomDirection, out hit, wanderRadius, 1);  // 找到最近的NavMesh表面上的一个点
-        Vector3 finalPosition = hit.position;  // 最终的目标位置
-        agent.SetDestination(finalPosition);  // 设置NavMeshAgent的目标
+        do
+        {
+            //生成一个以NPC当前位置为中心，wanderRadius为半径的球内的随机方向向量randomDirection
+            Vector3 randomDirection = UnityEngine.Random.insideUnitSphere * wanderRadius;
+            randomDirection += transform.position;
+            NavMeshHit hit;
+            NavMesh.SamplePosition(randomDirection, out hit, wanderRadius, 1);
+            Vector3 finalPosition = hit.position;
+            agent.SetDestination(finalPosition);
+        }
+        //如果目标位置不可达，就重新计算路径
+        while (agent.pathStatus == NavMeshPathStatus.PathInvalid||agent.pathStatus == NavMeshPathStatus.PathPartial);
+
     }
 }

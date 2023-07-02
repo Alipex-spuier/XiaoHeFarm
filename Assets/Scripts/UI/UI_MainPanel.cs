@@ -7,11 +7,15 @@ public class UI_MainPanel : MonoBehaviour
 {
     private Button BuildButton;
     private Text GoldText;
-    void Start()
+    private void Awake()
     {
         BuildButton = transform.Find("BuildButton").GetComponent<Button>();
         GoldText = transform.Find("Gold/Text").GetComponent<Text>();
         BuildButton.onClick.AddListener(BuildButtonClick);
+    }
+    void Start()
+    {
+
     }
 
     // 建造按钮点击
@@ -26,5 +30,6 @@ public class UI_MainPanel : MonoBehaviour
     {
         GoldText.text = num.ToString();
     }
+
 
 }

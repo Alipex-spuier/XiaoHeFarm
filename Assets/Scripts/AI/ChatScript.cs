@@ -7,45 +7,57 @@ using UnityEngine.UI;
 
 public class ChatScript : MonoBehaviour
 {
-    //API key
-    [Header("输入openai的apikey")]
-    [SerializeField]private string m_OpenAI_Key="填写你的Key";
-	// 定义Chat API的URL
-	private string m_ApiUrl = "https://api.openai.com/v1/completions";
-    //配置参数
-    [SerializeField]private GetOpenAI.PostData m_PostDataSetting;
     //聊天UI层
     [SerializeField]private GameObject m_ChatPanel;
     //输入的信息
     [SerializeField]private InputField m_InputWord;
     //返回的信息
     [SerializeField]private Text m_TextBack;
-/*    //播放设置
-    [SerializeField]private Toggle m_PlayToggle;*/
     //gpt-3.5-turbo
     [SerializeField] public GptTurboScript m_GptTurboScript;
     //promot_Useful
     [SerializeField] private string m_lan = "使用中文回答";
+/*    public WeatherController weather_C;
+    private string weather;
+    private bool isBk;
+    private int previousDay = -1;*/
+
+
+
+    //AI回复的信息
+    private void CallBack(string _callback){
+/*        if (isBk)
+        {
+            _callback = _callback.Trim();
+            m_TextBack.text = "";
+            //开始逐个显示返回的文本
+            m_WriteState = true;
+            StartCoroutine(SetTextPerWord(_callback));
+            weather = _callback;
+        }
+        else
+        {*/
+            _callback = _callback.Trim();
+            m_TextBack.text = "";
+            //开始逐个显示返回的文本
+            m_WriteState = true;
+            StartCoroutine(SetTextPerWord(_callback));
+       /* }*/
+    }
 
     //发送信息
     public void SendData()
     {
-        if(m_InputWord.text.Equals(""))
+        if (m_InputWord.text.Equals(""))
             return;
 
-        //记录聊天
-        m_ChatHistory.Add(m_InputWord.text);
+        string _msg = m_GptTurboScript.Prompt + m_lan + " " + m_InputWord.text;
+        StartCoroutine(m_GptTurboScript.GetPostData(_msg,CallBack));
 
-        string _msg= m_GptTurboScript.Prompt+m_lan+" "+m_InputWord.text;
-        //string _msg =m_lan + " " + m_InputWord.text;
-        //发送数据
-        //StartCoroutine (GetPostData (_msg,CallBack));
-        StartCoroutine(m_GptTurboScript.GetPostData(_msg, m_OpenAI_Key, CallBack));
+        m_InputWord.text = "";
+        m_TextBack.text = "...";
 
-        m_InputWord.text="";
-        m_TextBack.text="...";
 
-        
     }
 
     //发送信息
@@ -54,75 +66,13 @@ public class ChatScript : MonoBehaviour
         if (_postData.Equals(""))
             return;
 
-        //记录聊天
-        m_ChatHistory.Add(_postData);
-
         string _msg = m_GptTurboScript.Prompt + m_lan + " " + _postData;
-        StartCoroutine(m_GptTurboScript.GetPostData(_msg, m_OpenAI_Key, CallBack));
+        StartCoroutine(m_GptTurboScript.GetPostData(_msg, CallBack));
 
-        //m_InputWord.text = "";
         m_TextBack.text = "...";
 
 
     }
-
-
-    //AI回复的信息
-    private void CallBack(string _callback){
-        _callback=_callback.Trim();
-        m_TextBack.text="";
-        //开始逐个显示返回的文本
-        m_WriteState=true;
-        StartCoroutine(SetTextPerWord(_callback));
-
-    }
-
-
-    private IEnumerator Speek(string _msg){
-        yield return new WaitForEndOfFrame();
-    }
-
-	private IEnumerator GetPostData(string _postWord,System.Action<string> _callback)
-	{
-        using(UnityWebRequest request = new UnityWebRequest (m_ApiUrl, "POST")){   
-        GetOpenAI.PostData _postData = new GetOpenAI.PostData
-		{
-			model = m_PostDataSetting.model,
-			prompt = _postWord,
-			max_tokens = m_PostDataSetting.max_tokens,
-            temperature=m_PostDataSetting.temperature,
-            top_p=m_PostDataSetting.top_p,
-            frequency_penalty=m_PostDataSetting.frequency_penalty,
-            presence_penalty=m_PostDataSetting.presence_penalty,
-            stop=m_PostDataSetting.stop
-		};
-
-		string _jsonText = JsonUtility.ToJson (_postData);
-		byte[] data = System.Text.Encoding.UTF8.GetBytes (_jsonText);
-		request.uploadHandler = (UploadHandler)new UploadHandlerRaw (data);
-		request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer ();
-
-		request.SetRequestHeader ("Content-Type","application/json");
-		request.SetRequestHeader("Authorization",string.Format("Bearer {0}",m_OpenAI_Key));
-
-		yield return request.SendWebRequest ();
-
-		if (request.responseCode == 200) {
-			string _msg = request.downloadHandler.text;
-			GetOpenAI.TextCallback _textback = JsonUtility.FromJson<GetOpenAI.TextCallback> (_msg);
-			if (_textback!=null && _textback.choices.Count > 0) {
-                    
-                string _backMsg=Regex.Replace(_textback.choices [0].text, @"[\r\n]", "").Replace("？","");
-                _callback(_backMsg);
-			}
-		
-		}
-        }
-
-		
-	}
-
-
     #region 文字逐个显示
     //逐字显示的时间间隔
     [SerializeField]private float m_WordWaitTime=0.2f;
@@ -143,78 +93,24 @@ public class ChatScript : MonoBehaviour
 
     #endregion
 
-
-    #region 聊天记录
-    //保存聊天记录
-    [SerializeField]private List<string> m_ChatHistory;
-    //缓存已创建的聊天气泡
-    [SerializeField]private List<GameObject> m_TempChatBox;
-    //聊天记录显示层
-    [SerializeField]private GameObject m_HistoryPanel;
-    //聊天文本放置的层
-    [SerializeField]private RectTransform m_rootTrans;
-    //发送聊天气泡
-    [SerializeField]private ChatPrefab m_PostChatPrefab;
-    //回复的聊天气泡
-    [SerializeField]private ChatPrefab m_RobotChatPrefab;
-    //滚动条
-    [SerializeField]private ScrollRect m_ScroTectObject;
-    //获取聊天记录
-    public void OpenAndGetHistory(){
-        m_ChatPanel.SetActive(false);
-        m_HistoryPanel.SetActive(true);
-
-        ClearChatBox();
-        StartCoroutine(GetHistoryChatInfo());
-    }
-    //返回
-    public void BackChatMode(){
-        m_ChatPanel.SetActive(true);
-        m_HistoryPanel.SetActive(false);
-    }
-
-    //清空已创建的对话框
-    private void ClearChatBox(){
-        while(m_TempChatBox.Count!=0){
-            if(m_TempChatBox[0]){
-                Destroy(m_TempChatBox[0].gameObject);
-                m_TempChatBox.RemoveAt(0);
-            }
-        }
-        m_TempChatBox.Clear();
-    }
-
-    //获取聊天记录列表
-    private IEnumerator GetHistoryChatInfo()
+/*    private void foreCastWeather()
     {
+        //todo: 刚开始获取3个，然后每天获取一个
+        string _msgBk = m_lan + "给我一个天气名称，范围在小雨，普通，暴雨，沙尘暴，雪，高温,并且如果你给我的天气在这个范围，就输出明天天气的情况，进行天气预报";
+        isBk = true;
+        StartCoroutine(m_GptTurboScript.GetPostData(_msgBk, CallBack));
+        isBk = false;
+        Debug.Log(weather);
+        weather_C.AddWeatherForecast(MyTimer.Instance.day + 1, weather);
+    }
 
-        yield return new WaitForEndOfFrame();
-
-       for(int i=0;i<m_ChatHistory.Count;i++){
-        if(i%2==0){
-            ChatPrefab _sendChat=Instantiate(m_PostChatPrefab,m_rootTrans.transform);
-            _sendChat.SetText(m_ChatHistory[i]);
-            m_TempChatBox.Add(_sendChat.gameObject);
-            continue;
+    private void Update()
+    {
+        if (MyTimer.Instance.day != previousDay)
+        {
+                foreCastWeather();
+            previousDay = MyTimer.Instance.day;
         }
-
-         ChatPrefab _reChat=Instantiate(m_RobotChatPrefab,m_rootTrans.transform);
-        _reChat.SetText(m_ChatHistory[i]);
-        m_TempChatBox.Add(_reChat.gameObject);
-       }
-
-        //重新计算容器尺寸
-        LayoutRebuilder.ForceRebuildLayoutImmediate(m_rootTrans);
-        StartCoroutine(TurnToLastLine());
-    }
-
-    private IEnumerator TurnToLastLine(){
-        yield return new WaitForEndOfFrame();
-         //滚动到最近的消息
-        m_ScroTectObject.verticalNormalizedPosition=0;
-    }
-
-
-    #endregion
+    }*/
 
 }

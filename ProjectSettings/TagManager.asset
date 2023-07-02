@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Crop
+  - NPC
+  - AirWall
   layers:
   - Default
   - TransparentFX
