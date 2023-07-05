@@ -15,6 +15,7 @@ public abstract class UI_ShopPanelBase<T> : UI_ListPanelBase<T> where T:UI_ShopP
         {
             UI_ShopItem item = GameObject.Instantiate(prefab_Item, parent_Item).GetComponent<UI_ShopItem>();
             item.Init(shopConf.ShopConfItems[i], CloseButtonClick);
+            //UI_DayPanel.Instance.BuildBuilding(confItem.Name);
         }
     }
 

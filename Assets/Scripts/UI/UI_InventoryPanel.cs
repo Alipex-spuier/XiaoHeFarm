@@ -56,11 +56,36 @@ public class UI_InventoryPanel : UI_ListPanelBase<UI_InventoryPanel>
             //GameObject crop = GameObject.Find("cropName");
             if (cropName == "向日葵")
             {
-                Player_C.Instance.Gold += count * Crop_Sunflower.Price;
+                if(CropBase.GetExp(1) < 10)
+                {
+                    Player_C.Instance.Gold += count * Crop_Sunflower.Price;
+                }
+                else
+                {
+                    Player_C.Instance.Gold += count * Crop_Sunflower.Price * 3 / 2;
+                }
             }
             else if (cropName == "苹果")
             {
-                Player_C.Instance.Gold += count * Crop_Apple.Price;
+                if (CropBase.GetExp(0) < 5)
+                {
+                    Player_C.Instance.Gold += count * Crop_Apple.Price;
+                }
+                else
+                {
+                    Player_C.Instance.Gold += count * Crop_Apple.Price * 3 / 2;
+                }
+            }
+            else if (cropName == "小麦")
+            {
+                if (CropBase.GetExp(0) < 5)
+                {
+                    Player_C.Instance.Gold += count * Crop_Wheat.Price;
+                }
+                else
+                {
+                    Player_C.Instance.Gold += count * Crop_Wheat.Price * 3 / 2;
+                }
             }
         }
         else if (cropDic[cropName] < count)

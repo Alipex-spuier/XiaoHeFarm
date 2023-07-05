@@ -6,7 +6,7 @@ using UnityEngine;
 public class Crop_Sunflower : CropBase
 {
     public static int Price = 20;
+
+    public static int Production = 5;
     public override float Size => 10;
-
-
 }

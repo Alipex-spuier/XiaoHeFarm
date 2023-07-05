@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
     private UI_BuildPanel buildPanel;
     private UI_TaskPanel taskPanel;
     private UI_DayPanel dayPanel;
+    private UI_illustrationPanel illustrationPanel;
 
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class UIManager : MonoBehaviour
         buildPanel = transform.Find("BuildPanel").GetComponent<UI_BuildPanel>();
         taskPanel = transform.Find("TaskPanel").GetComponent<UI_TaskPanel>();
         dayPanel = transform.Find("DayPanel").GetComponent<UI_DayPanel>();
+        illustrationPanel = transform.Find("illustratedPanel").GetComponent<UI_illustrationPanel>();
     }
     void Start()
     {
@@ -63,6 +65,9 @@ public class UIManager : MonoBehaviour
     {
         dayPanel.SetActive(true);
     }
-
+    public void ShowIllPanel()
+    {
+        illustrationPanel.SetActive(true);
+    }
 
 }

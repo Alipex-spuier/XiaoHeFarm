@@ -1,6 +1,7 @@
 ﻿using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 // 植物状态
@@ -21,7 +22,11 @@ public abstract class CropBase : BaseBuild
     private CropState cropState;
     public GameObject imgHand;
     public GameObject imgSeed;
+    public GameObject imgWater;
+    public string weather;
     private float waterState;
+    public static int[] exp = { 0, 0 };
+    private int actualCropNum;
     private float growingTime;//植物状态发生变化的时间
     // 等级
     [SerializeField]
@@ -48,15 +53,20 @@ public abstract class CropBase : BaseBuild
                 // 修改我的模型
                 //  TODO:待用对象池替代 模型实例化以及销毁        
                 if (model != null) Destroy(model);
-                model = GameObject.Instantiate(lvPrefabs[Lv], transform);
-                if(value == 1)
+                model = GameObject.Instantiate(lvPrefabs[Lv], transform); 
+                if (Lv == 1)
                 {
-                    MyTimer.Instance.ScheduleAction(5f, UpGrade);
-                    return;
+                    if (WeatherController.Instance.GetWeather() != "小雨" && WeatherController.Instance.GetWeather() != "暴雨")
+                    { 
+                        imgWater.SetActive(true);
+                    }//若天气不为雨天，则显示缺水，并且要求进行浇水操作
+                    else {
+                        Water();
+                        imgWater.SetActive(false);
+                        DoGrow();//若天气为雨，则生长至第二阶段的作物自动进行浇水，并显示已经浇过水，作物自动生长
+                    }
                 }
-
             }
-
         }
     }
     public CropState CropState
@@ -71,15 +81,18 @@ public abstract class CropBase : BaseBuild
                     Lv = 0;
                     imgHand.SetActive(false);
                     imgSeed.SetActive(true);
+                    imgWater.SetActive(false);
                     break;
                 case CropState.Grow:
                     imgHand.SetActive(false);
                     imgSeed.SetActive(false);
+                    imgWater.SetActive(false);
                     InitGrow();
                     break;
                 case CropState.Ripe:
                     imgHand.SetActive(true);
                     imgSeed.SetActive(false);
+                    imgWater.SetActive(false);
                     break;
             }
         }
@@ -90,12 +103,14 @@ public abstract class CropBase : BaseBuild
         Lv = 0;
         imgHand.SetActive(false);
         imgSeed.SetActive(false);
+        imgWater.SetActive(false);
+        weather = WeatherController.Instance.GetWeather();
     }
     protected override void OnPlaceOver()
     {
-        growingTime = MyTimer.Instance.GetCurrentTime();
         // 默认有种子
         CropState = CropState.Grow;
+        UI_DayPanel.Instance.BuildCrop(cropName);
         
     }
     private void InitGrow()
@@ -104,16 +119,8 @@ public abstract class CropBase : BaseBuild
     }
     private void DoGrow()
     {
-        for (int i = 0; i < lvPrefabs.Length; i++)
-        {
-            //float currentTime = MyTimer.Instance.GetCurrentTime();
-            //if ((currentTime - growingTime) * 10 >= 50)
-            //{
-            //    UpGrade();
-            //    growingTime = MyTimer.Instance.GetCurrentTime();
-            //}
-            MyTimer.Instance.ScheduleAction(5f, UpGrade);
-        }
+        //MyTimer.Instance.ScheduleAction(1f, LoseWater);
+        MyTimer.Instance.ScheduleAction(5f, UpGrade);
     }
     // 升级
     private void UpGrade()
@@ -148,13 +155,99 @@ public abstract class CropBase : BaseBuild
                 
                 break;
             case CropState.Grow:
+                if (Lv == 1 && waterState == 0)//生长进入第二阶段且未浇过水
+                {
+                    Water();//点击作物进行浇水
+                    imgWater.SetActive(false);//缺水图标消失
+                    transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+                    transform.DOScale(1, 0.8f);//播放交互成功的动画
+                    DoGrow();//作物继续生长
+                    return;
+                }
+                else if(Lv == 1 && waterState == 1)
+                {
+                    transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+                    transform.DOScale(1, 0.8f);//播放交互成功的动画
+                    return;
+                }
                 break;
             case CropState.Ripe:
                 if (UIManager.Instance.HaveInventory)
                 {
                     // 进仓库
-                    UI_InventoryPanel.Instance.AddCrop(cropName, 1);
+                    
+                    if (cropName == "苹果")
+                    {
+                        switch (WeatherController.Instance.GetWeather())
+                        {
+                            case "普通":
+                                actualCropNum = Crop_Apple.Production;
+                                break;
+                            case "雪":
+                            case "小雨":
+                                actualCropNum = Crop_Apple.Production * 6 / 5;
+                                break;
+                            case "暴雨":
+                            case "高温":
+                                actualCropNum = Crop_Apple.Production * 2 / 5;
+                                break;
+                            case "沙尘暴":
+                                actualCropNum = Crop_Apple.Production * 4 / 5;
+                                break;
+                        }
+                        if (exp[0] < 5)
+                        {
+                            exp[0]++;
+                        }
+                    }
+                    else if(cropName == "向日葵")
+                    {
+                        switch (WeatherController.Instance.GetWeather())
+                        {
+                            case "普通":
+                                actualCropNum = Crop_Sunflower.Production;
+                                break;
+                            case "雪":
+                            case "暴雨":
+                            case "小雨":
+                                actualCropNum = Crop_Sunflower.Production * 1 / 5;
+                                break;
+                            case "高温":
+                            case "沙尘暴":
+                                actualCropNum = Crop_Sunflower.Production * 8 / 5;
+                                break;
+                        }
+                        if (exp[1] < 10)
+                        {
+                            exp[1]++;
+                        }
+                    }
+                    else if (cropName == "小麦")
+                    {
+                        switch (WeatherController.Instance.GetWeather())
+                        {
+                            case "普通":
+                                actualCropNum = Crop_Wheat.Production;
+                                break;
+                            case "雪":
+                            case "小雨":
+                            case "高温":
+                            case "沙尘暴":
+                                actualCropNum = Crop_Wheat.Production * 6 / 5;
+                                break;
+                            case "暴雨":
+                                actualCropNum = Crop_Wheat.Production * 3 / 5;
+                                break;
+                        }
+                        if (exp[1] < 10)
+                        {
+                            exp[1]++;
+                        }
+                    }
+                    UI_DayPanel.Instance.GetCrop(cropName, actualCropNum);
+                    UI_InventoryPanel.Instance.AddCrop(cropName, actualCropNum);
                     CropState = CropState.Empty;
+                    waterState = 0;
                 }
                 else
                 {
@@ -165,15 +258,30 @@ public abstract class CropBase : BaseBuild
                 break;
         }
     }
+
+    public static int GetExp(int i)
+    {
+        return exp[i];
+    }
     private void StopGrowing()
     {
 
     }//缺水时停止生长
     private void Water()
     {
-        if (waterState <= 50)
-            waterState += 50;
-        else waterState = 100;//加上缺水显示
+        waterState = 1;
     }//浇水
+    /*private void LoseWater()
+    {
+        if(waterState >= 30)
+        {
+            waterState -= 30;
+        }
+        else
+        {
+            StopGrowing();
+            waterState -= 30;
+        }
+    }*/
 
 }

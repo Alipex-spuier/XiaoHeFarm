@@ -50,6 +50,9 @@ public class UI_ShopItem : MonoBehaviour
         countText.text = currCount + "/" + confItem.MaxCount.ToString();
         moneyText.text = confItem.Gold.ToString();
 
+        
+
+
         BuildButtonClickAction = buildButtonClick;
     }
 
@@ -75,8 +78,7 @@ public class UI_ShopItem : MonoBehaviour
     {
         currCount += 1;
         countText.text = currCount + "/" + confItem.MaxCount.ToString();
-
-        
-
+        if(confItem.Name=="商店"||confItem.Name=="仓库")
+        UI_DayPanel.Instance.BuildBuilding(confItem.Name);
     }
 }

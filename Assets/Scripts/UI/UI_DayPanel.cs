@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class UI_DayPanel : UI_ListPanelBase<UI_DayPanel>
 {
+
+    public Text weather;
        
     //AllPart下有多个Part，每个Part有一个Title和多个Content
     private GameObject allPart;
@@ -12,6 +14,8 @@ public class UI_DayPanel : UI_ListPanelBase<UI_DayPanel>
     public GameObject Part;
     //Content的预制体
     public GameObject Content;
+    //过场动画
+    public GameObject Animation;
 
     //场景初始加载时：先调用OnEnable，再调用Close
     private bool finishInit = false;
@@ -25,10 +29,9 @@ public class UI_DayPanel : UI_ListPanelBase<UI_DayPanel>
 
     private void Awake()
     {
+        Instance = this;
         allPart = transform.Find("BG/AllPart").gameObject;
-        CropBuildNum.Add("向日葵", 5);
-        BuildingNum.Add("商店", 1);
-        CropNum.Add("向日葵", 25);
+        weather = transform.parent.Find("MainPanel/CurrentWeather").gameObject.GetComponent<Text>();  
     }
 
     private void OnEnable()
@@ -56,11 +59,14 @@ public class UI_DayPanel : UI_ListPanelBase<UI_DayPanel>
     //当天结束
     private void DayOver()
     {
-        Debug.Log("DayOver");
+        //如果说第一天结束了，在DayOver中day已经变为了2，那么预报天气的时候就是预报的第2+1天的天气，切换天气就是切换到第2天的天气
+        //切换至第三人称
+        Camer_C.Instance.SwitchTo3();
         //停止计时
         MyTimer.Instance.StopClock();
-        //切换天气
-        WeatherController.Instance.SwitchWeather();
+        //预报天气
+        ChatScript.Instance.foreCastWeather();
+
         //显示结算界面
         //首先检测不为空的字典
         GameObject temp;
@@ -73,8 +79,8 @@ public class UI_DayPanel : UI_ListPanelBase<UI_DayPanel>
             foreach(var item in CropBuildNum)
             {
                 content = Instantiate(Content, temp.transform);
-                Content.transform.Find("Item").GetComponent<Text>().text = item.Key;
-                Content.transform.Find("Count").GetComponent<Text>().text = item.Value.ToString();
+                content.transform.Find("Item").GetComponent<Text>().text = item.Key;
+                content.transform.Find("Count").GetComponent<Text>().text = item.Value.ToString();
 
             }
         }
@@ -84,8 +90,8 @@ public class UI_DayPanel : UI_ListPanelBase<UI_DayPanel>
             foreach (var item in BuildingNum)
             {
                 content = Instantiate(Content, temp.transform);
-                Content.transform.Find("Item").GetComponent<Text>().text = item.Key;
-                Content.transform.Find("Count").GetComponent<Text>().text = item.Value.ToString();
+                content.transform.Find("Item").GetComponent<Text>().text = item.Key;
+                content.transform.Find("Count").GetComponent<Text>().text = item.Value.ToString();
 
             }
         }
@@ -96,23 +102,28 @@ public class UI_DayPanel : UI_ListPanelBase<UI_DayPanel>
             foreach (var item in CropNum)
             {
                 content = Instantiate(Content, temp.transform);
-                Content.transform.Find("Item").GetComponent<Text>().text = item.Key;
-                Content.transform.Find("Count").GetComponent<Text>().text = item.Value.ToString();
+                content.transform.Find("Item").GetComponent<Text>().text = item.Key;
+                content.transform.Find("Count").GetComponent<Text>().text = item.Value.ToString();
 
             }
         }
-
+        //如果全都为空
+        if(CropBuildNum.Count == 0 && BuildingNum.Count == 0 && CropNum.Count == 0)
+        {
+            temp = Instantiate(Part, allPart.transform);
+            temp.transform.Find("Title/Text").GetComponent<Text>().text = "今日无事发生";
+        }
 
 
     }
     //进入下一天
     private void NextDay()
     {
-        Debug.Log("NextDay");
-        //开始计时
-        MyTimer.Instance.BeginClock();
+
+        //显示天气
+        weather.text ="当前天气："+ WeatherController.Instance.GetWeather();
         //删除AllPart的所有子物体
-        for(int i=0;i<allPart.transform.childCount;i++)
+        for (int i=0;i<allPart.transform.childCount;i++)
         {
             Destroy(allPart.transform.GetChild(i).gameObject);
         }
@@ -120,6 +131,10 @@ public class UI_DayPanel : UI_ListPanelBase<UI_DayPanel>
         CropBuildNum.Clear();
         BuildingNum.Clear();
         CropNum.Clear();
+        //播放过场动画，播放完切换天气、重新计时
+        Animation.SetActive(true);
+        //切换天气，移动至动画加载部分
+        //WeatherController.Instance.SwitchWeather();
     }
     //新增田地
     public void BuildCrop(string name)
@@ -131,6 +146,7 @@ public class UI_DayPanel : UI_ListPanelBase<UI_DayPanel>
         {
             CropBuildNum.Add(name, 1);
         }
+        UI_illustrationPanel.Instance.AddCropTime(name);
     }
     //新增建筑
     public void BuildBuilding(string name)
@@ -143,6 +159,7 @@ public class UI_DayPanel : UI_ListPanelBase<UI_DayPanel>
         {
             BuildingNum.Add(name, 1);
         }
+        UI_illustrationPanel.Instance.AddBuildingTime(name);
     }
     //收获作物
     public void GetCrop(string name,int num)

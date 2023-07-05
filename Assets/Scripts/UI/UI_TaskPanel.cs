@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
 
 public class UI_TaskPanel : UI_ListPanelBase<UI_TaskPanel>
 {
@@ -23,11 +22,6 @@ public class UI_TaskPanel : UI_ListPanelBase<UI_TaskPanel>
     {
         // 打开任务面板
         UIManager.Instance.ShowTaskPanel();
-    }
-    //测试用
-    public void CreateTask()
-    {
-        CreateTask("aksjdfjaskfdjjaskjdfkjsadlfjalskdf", "向日葵", 15, "Gold", "25");
     }
     //创建任务
     public void CreateTask(string taskDescription, string need, int needCount, string rewardType, string reward)

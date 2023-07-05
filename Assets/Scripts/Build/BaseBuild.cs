@@ -26,6 +26,7 @@ public abstract class BaseBuild : MonoBehaviour
     {
         isPlacing = false;
         OnPlaceOver();
+
     }
 
     protected virtual void OnPlaceOver() { }

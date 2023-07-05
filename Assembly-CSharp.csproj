@@ -60,45 +60,66 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Weather\WeatherController.cs" />
     <Compile Include="Assets\Scripts\Crop\Crop_Apple.cs" />
+    <Compile Include="Assets\Scripts\DataPersistenceManager.cs" />
     <Compile Include="Assets\Scripts\Crop\CropBase.cs" />
     <Compile Include="Assets\Scripts\UI\UI_ShopItem.cs" />
-    <Compile Include="Assets\Scripts\SceneJump.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_Loading.cs" />
     <Compile Include="Assets\Scripts\Build\Build_Inventory.cs" />
+    <Compile Include="Assets\loadingBar\scripts\loadingtext.cs" />
+    <Compile Include="Assets\Scripts\AirWall.cs" />
+    <Compile Include="Assets\loadingBar\scripts\rotatetotate.cs" />
     <Compile Include="Assets\Scripts\Crop\Crop_Sunflower.cs" />
     <Compile Include="Assets\Scripts\UI\UI_DayPanel.cs" />
     <Compile Include="Assets\UnityTechnologies\ParticlePack\Shared\Scripts\ProximityActivate.cs" />
     <Compile Include="Assets\Scripts\UI\UI_ListPanelBase.cs" />
     <Compile Include="Assets\Scripts\AI\ChatScript.cs" />
     <Compile Include="Assets\Scripts\Camera_C.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_Teach.cs" />
     <Compile Include="Assets\Scripts\UI\UI_TaskItem.cs" />
     <Compile Include="Assets\Scripts\UI\UI_ShopPanel.cs" />
+    <Compile Include="Assets\Scripts\GameData.cs" />
     <Compile Include="Assets\Scripts\UI\UI_InventoryItem.cs" />
     <Compile Include="Assets\Scripts\MyTimer.cs" />
     <Compile Include="Assets\Scripts\UI\UI_TaskPanel.cs" />
     <Compile Include="Assets\Scripts\GameMusic.cs" />
-    <Compile Include="Assets\Scripts\AI\ChatPrefab.cs" />
+    <Compile Include="Assets\Scripts\RecordPanel.cs" />
+    <Compile Include="Assets\loadingBar\scripts\Loading.cs" />
+    <Compile Include="Assets\loadingBar\scripts\loadingcolorful.cs" />
     <Compile Include="Assets\Scripts\Build\BaseBuild.cs" />
+    <Compile Include="Assets\Scripts\NPC\NPC_Generator.cs" />
+    <Compile Include="Assets\Scripts\Crop\Crop_Wheat.cs" />
     <Compile Include="Assets\Scripts\Weather\WeatherBase.cs" />
     <Compile Include="Assets\Scripts\NPC\NPC_Controller.cs" />
     <Compile Include="Assets\Scripts\AI\GptTurboScript.cs" />
+    <Compile Include="Assets\Scripts\RecordUI.cs" />
+    <Compile Include="Assets\loadingBar\scripts\loadingbar.cs" />
     <Compile Include="Assets\Supercyan Character Pack Free Sample\Scripts\FreeCameraLogic.cs" />
     <Compile Include="Assets\Scripts\UI\UI_ShopPanelBase.cs" />
     <Compile Include="Assets\UnityTechnologies\ParticlePack\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_illustrationPanel.cs" />
+    <Compile Include="Assets\loadingBar\scripts\simplerotate.cs" />
     <Compile Include="Assets\Scripts\Base\Singleton.cs" />
     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\Supercyan Character Pack Free Sample\Scripts\SimpleSampleCharacterControl.cs" />
     <Compile Include="Assets\UnityTechnologies\ParticlePack\Shared\Ramps\Runtime\RampAsset.cs" />
+    <Compile Include="Assets\Scripts\DataPersistentceManager.cs" />
     <Compile Include="Assets\UnityTechnologies\ParticlePack\Shared\Scripts\AdjustTimeScale.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem.cs" />
     <Compile Include="Assets\Scripts\UI\UI_InventoryPanel.cs" />
+    <Compile Include="Assets\loadingBar\scripts\SimpleLoading.cs" />
     <Compile Include="Assets\UnityTechnologies\ParticlePack\Shared\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Supercyan Character Pack Free Sample\Scripts\DemoFree.cs" />
     <Compile Include="Assets\UnityTechnologies\ParticlePack\EffectExamples\Misc Effects\Scripts\SpawnEffect.cs" />
+    <Compile Include="Assets\Scripts\Conf\IllustrationConf.cs" />
+    <Compile Include="Assets\Scripts\RecordData.cs" />
     <Compile Include="Assets\UnityTechnologies\ParticlePack\Shared\Scripts\SimpleCharacterMotor.cs" />
     <Compile Include="Assets\Scripts\Build\Build_Shop.cs" />
     <Compile Include="Assets\Scripts\Player_C.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_IllItem.cs" />
     <Compile Include="Assets\Scripts\UI\UI_BuildPanel.cs" />
+    <Compile Include="Assets\Scripts\Weather\Save.cs" />
     <Compile Include="Assets\Scripts\UI\UI_MainPanel.cs" />
-    <Compile Include="Assets\Scripts\AI\GetOpenAI.cs" />
+    <Compile Include="Assets\Scripts\SceneSwitcher.cs" />
     <Compile Include="Assets\Scripts\Conf\ShopConf.cs" />
     <Compile Include="Assets\Scripts\NPC\Obstacle.cs" />
   </ItemGroup>
@@ -384,6 +405,9 @@
     </Reference>
     <Reference Include="DOTween">
       <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:\UnityProgramEditor\2022.3.0f1c1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>

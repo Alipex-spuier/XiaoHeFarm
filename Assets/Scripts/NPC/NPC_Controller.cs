@@ -24,7 +24,9 @@ public class NPC_Controller : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         timer = 0;
         wanderTimer = random.Next(1, 10);
-        
+    }
+    private void Start()
+    {
         Begin();
     }
     private void Update()

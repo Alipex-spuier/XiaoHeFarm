@@ -23,3 +23,8 @@ MonoBehaviour:
     Gold: 20
     Prefab: {fileID: 1993682131220130447, guid: 246432f8c0c021048a23be8706b8657b,
       type: 3}
+  - Name: "\u5C0F\u9EA6"
+    MaxCount: 100
+    Gold: 20
+    Prefab: {fileID: 1993682131220130447, guid: 6f235a03aa6a195489780c8ccb5e0549,
+      type: 3}

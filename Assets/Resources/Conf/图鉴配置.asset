@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65fa024df89f92241903e6f8a3396a3b, type: 3}
+  m_Name: "\u56FE\u9274\u914D\u7F6E"
+  m_EditorClassIdentifier: 
+  weatherConfItems:
+  - Name: "\u5927\u96E8"
+    sprite: {fileID: 21300000, guid: 76890ad90c3c0fe4f892a8e5343cf550, type: 3}
+    description: "\u8FD9\u662F\u5927\u96E8"
+    Weather: 123
+  cropConfItems:
+  - Name: "\u5411\u65E5\u8475"
+    sprite: {fileID: 21300000, guid: f767e6eab41dec84385722e8d27d64c9, type: 3}
+    description: "\u8FD9\u662F\u5411\u65E5\u8475"
+    BuildGold: 0
+    SellGold: 0
+    BuildTimes: 1
+  - Name: "\u82F9\u679C"
+    sprite: {fileID: 21300000, guid: f41b576272c0ff94185c9cbe05bb6183, type: 3}
+    description: "\u8FD9\u662F\u82F9\u679C"
+    BuildGold: 0
+    SellGold: 0
+    BuildTimes: 0
+  buildConfItems:
+  - Name: "\u5546\u5E97"
+    sprite: {fileID: 21300000, guid: e7138392ab3429b49b0693a84a3c9261, type: 3}
+    description: "\u8FD9\u662F\u5546\u5E97"
+    BuildGold: 50
+    BuildTimes: 8
+  - Name: "\u4ED3\u5E93"
+    sprite: {fileID: 21300000, guid: efe30a0452d64df4782d69c534f9f993, type: 3}
+    description: "\u8FD9\u662F\u4ED3\u5E93"
+    BuildGold: 50
+    BuildTimes: 1

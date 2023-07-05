@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Camer_C : MonoBehaviour
 {
-
-
+    public static Camer_C Instance;
+    public GameObject Zombie;
     public Camera m_Camera;//第三人称
     private GameObject mainCamera;
     public Camera p_Camera;//第一人称
     private GameObject playerCamera;
     public Transform  player;
-    public GameObject m_mainPanel;
+    public UI_MainPanel m_mainPanel;
     private float mouseX, mouseY;
     public float mouseSensitivity;
     private bool isFirstPerson = false;
@@ -32,7 +32,10 @@ public class Camer_C : MonoBehaviour
     //缩放尺度
     public float scale;
 
-
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
@@ -45,27 +48,7 @@ public class Camer_C : MonoBehaviour
     void FixedUpdate()
     {
         // 检测键盘上的"v"键是否被按下
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            isFirstPerson = !isFirstPerson;
-            if (isFirstPerson)
-            {
-                // 切换为第一人称
-                player.gameObject.SetActive(true);
-                p_Camera.enabled = true;
-                m_Camera.enabled = false;
-                m_mainPanel.SetActive(false);
-            }
-            else
-            {
-                // 切换为第三人称
-                //p_Camera.enabled = false;
-                m_Camera.enabled = true;
-                m_mainPanel.SetActive(true);
-                transform.localRotation = Quaternion.Euler(45, 0, 0);
-                player.gameObject.SetActive(false);
-            }
-        }
+        SwitchState();
         // 根据当前人称执行对应的方法
         if (isFirstPerson)
         {
@@ -77,8 +60,38 @@ public class Camer_C : MonoBehaviour
             CheckBorder();
         }
     }
+    public void SwitchState()
+    {
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            isFirstPerson = !isFirstPerson;
+            if (isFirstPerson)
+            {
+                // 切换为第一人称
 
-
+                p_Camera.enabled = true;
+                m_Camera.enabled = false;
+                m_mainPanel.SwitchTo1();
+                Zombie.gameObject.SetActive(false);
+            }
+            else
+            {
+                // 切换为第三人称
+                //p_Camera.enabled = false;
+                m_Camera.enabled = true;
+                m_mainPanel.SwitchTo3();
+                transform.localRotation = Quaternion.Euler(45, 0, 0);
+                Zombie.gameObject.SetActive(true);
+            }
+        }
+    }
+    public void SwitchTo3()
+    {
+        m_Camera.enabled = true;
+        m_mainPanel.SwitchTo3();
+        transform.localRotation = Quaternion.Euler(45, 0, 0);
+        Zombie.gameObject.SetActive(true);
+    }
 
     private void playerMove()
     {

@@ -6,7 +6,7 @@ using System.Collections;
 
 public class GptTurboScript : MonoBehaviour
 {
-    private string _openAI_Key = "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";
+    private string _openAI_Key = "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";
     /// <summary>
     /// api地址
     /// </summary>
@@ -37,10 +37,11 @@ public class GptTurboScript : MonoBehaviour
     /// <param name="_openAI_Key">密钥</param>
     /// <param name="_callback">GPT的回调</param>
     /// <returns></returns>
-    public IEnumerator GetPostData(string _postWord, System.Action<string> _callback)
+    public IEnumerator GetPostData(string _postWord, System.Action<string,string> _callback,string callbackType)
     {
         //缓存发送的信息列表
-        m_DataList.Add(new SendData("user", _postWord));
+            m_DataList.Add(new SendData("user", _postWord));
+        
 
         using (UnityWebRequest request = new UnityWebRequest(m_ApiUrl, "POST"))
         {
@@ -70,7 +71,7 @@ public class GptTurboScript : MonoBehaviour
                     string _backMsg = _textback.choices[0].message.content;
                     //添加记录
                     m_DataList.Add(new SendData("assistant", _backMsg));
-                    _callback(_backMsg);
+                    _callback(_backMsg,callbackType);
                 }
             }
         }
