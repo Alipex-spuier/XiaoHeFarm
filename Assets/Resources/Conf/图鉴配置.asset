@@ -13,31 +13,57 @@ MonoBehaviour:
   m_Name: "\u56FE\u9274\u914D\u7F6E"
   m_EditorClassIdentifier: 
   weatherConfItems:
-  - Name: "\u5927\u96E8"
+  - Name: "\u6674"
     sprite: {fileID: 21300000, guid: 76890ad90c3c0fe4f892a8e5343cf550, type: 3}
-    description: "\u8FD9\u662F\u5927\u96E8"
+    description: "\u9002\u5408\u4F5C\u7269\u751F\u957F\u7684\u5929\u6C14"
+    Weather: 123
+  - Name: "\u5C0F\u96E8"
+    sprite: {fileID: 21300000, guid: 76890ad90c3c0fe4f892a8e5343cf550, type: 3}
+    description: "\u80FD\u4E3A\u690D\u7269\u63D0\u4F9B\u751F\u957F\u7684\u6C34\u5206\uFF0C\u5149\u7167\u8F83\u5C11\uFF0C\u6C14\u6E29\u8F83\u4F4E"
+    Weather: 123
+  - Name: "\u66B4\u96E8"
+    sprite: {fileID: 21300000, guid: 76890ad90c3c0fe4f892a8e5343cf550, type: 3}
+    description: "\u80FD\u4E3A\u4F5C\u7269\u63D0\u4F9B\u751F\u957F\u7684\u6C34\u5206\uFF0C\u4F46\u540C\u65F6\u4E5F\u4F1A\u964D\u4F4E\u690D\u7269\u4EA7\u91CF"
+    Weather: 123
+  - Name: "\u6C99\u5C18\u66B4"
+    sprite: {fileID: 21300000, guid: 76890ad90c3c0fe4f892a8e5343cf550, type: 3}
+    description: "\u4F5C\u7269\u751F\u957F\u9700\u6C34\u91CF\u589E\u52A0\uFF0C\u89C6\u91CE\u53EF\u89C1\u5EA6\u964D\u4F4E\uFF0C\u9002\u5408\u8010\u65F1\u7684\u4F5C\u7269\u751F\u957F"
+    Weather: 123
+  - Name: "\u9AD8\u6E29"
+    sprite: {fileID: 21300000, guid: 76890ad90c3c0fe4f892a8e5343cf550, type: 3}
+    description: "\u5149\u7167\u589E\u52A0\uFF0C\u6E29\u5EA6\u5347\u9AD8\uFF0C\u9002\u5408\u8010\u65F1\u7684\u4F5C\u7269\u751F\u957F"
+    Weather: 123
+  - Name: "\u96EA"
+    sprite: {fileID: 21300000, guid: 76890ad90c3c0fe4f892a8e5343cf550, type: 3}
+    description: "\u5149\u7167\u51CF\u5C11\uFF0C\u6E29\u5EA6\u5927\u5E45\u5EA6\u964D\u4F4E\uFF0C\u9002\u5408\u6297\u5BD2\u7684\u4F5C\u7269\u751F\u957F"
     Weather: 123
   cropConfItems:
   - Name: "\u5411\u65E5\u8475"
     sprite: {fileID: 21300000, guid: f767e6eab41dec84385722e8d27d64c9, type: 3}
-    description: "\u8FD9\u662F\u5411\u65E5\u8475"
+    description: "\u5411\u65E5\u8475\u559C\u6E29\u6696\u53C8\u8010\u5BD2\uFF0C\u5B9C\u51B7\u51C9\u6C14\u5019\uFF0C\u8010\u65F1\uFF0C\u5BF9\u571F\u58E4\u8981\u6C42\u8F83\u4F4E\uFF0C\u5728\u5404\u7C7B\u571F\u58E4\u4E0A\u5747\u80FD\u751F\u957F\uFF0C\u4ECE\u80A5\u6C83\u571F\u58E4\u5230\u65F1\u5730\u3001\u7620\u8584\u5730\u3001\u76D0\u78B1\u5730\u5747\u53EF\u79CD\u690D\u3002"
     BuildGold: 0
-    SellGold: 0
-    BuildTimes: 1
+    SellGold: 20
+    BuildTimes: 0
+  - Name: "\u5C0F\u9EA6"
+    sprite: {fileID: 21300000, guid: d6e37162d2af13948b07cef6489b36dc, type: 3}
+    description: "\u5C0F\u9EA6\u7684\u9002\u5E94\u6027\u8F83\u5E7F\uFF0C\u5BF9\u5404\u79CD\u6C14\u5019\u90FD\u6709\u8F83\u5F3A\u7684\u9002\u5E94\u6027\uFF0C\u5404\u79CD\u571F\u58E4\u6761\u4EF6\u90FD\u53EF\u79CD\u690D\u3002"
+    BuildGold: 0
+    SellGold: 5
+    BuildTimes: 0
   - Name: "\u82F9\u679C"
     sprite: {fileID: 21300000, guid: f41b576272c0ff94185c9cbe05bb6183, type: 3}
-    description: "\u8FD9\u662F\u82F9\u679C"
+    description: "\u82F9\u679C\u559C\u5149\u3001\u8010\u5BD2\u3001\u8981\u6C42\u8F83\u51B7\u51C9\u53CA\u5E72\u71E5\u7684\u6C14\u5019\uFF0C\u4E0D\u8010\u7620\u8584\uFF0C\u9002\u751F\u4E8E\u571F\u8D28\u758F\u677E\u3001\u6DF1\u539A\u80A5\u6C83\u3001\u6392\u6C34\u826F\u597D\u7684\u4E2D\u6027\u6216\u5FAE\u9178\u6027\u7684\u7802\u8D28\u58E4\u571F\u3002"
     BuildGold: 0
-    SellGold: 0
+    SellGold: 10
     BuildTimes: 0
   buildConfItems:
   - Name: "\u5546\u5E97"
     sprite: {fileID: 21300000, guid: e7138392ab3429b49b0693a84a3c9261, type: 3}
-    description: "\u8FD9\u662F\u5546\u5E97"
+    description: "\u552E\u5356\u5404\u5F0F\u5404\u6837\u7684\u690D\u7269\u79CD\u5B50\u3002"
     BuildGold: 50
-    BuildTimes: 8
+    BuildTimes: 0
   - Name: "\u4ED3\u5E93"
     sprite: {fileID: 21300000, guid: efe30a0452d64df4782d69c534f9f993, type: 3}
-    description: "\u8FD9\u662F\u4ED3\u5E93"
+    description: "\u5B58\u50A8\u4E86\u6536\u83B7\u7684\u4F5C\u7269\u3002"
     BuildGold: 50
-    BuildTimes: 1
+    BuildTimes: 0

@@ -6,7 +6,7 @@ using System.Collections;
 
 public class GptTurboScript : MonoBehaviour
 {
-    private string _openAI_Key = "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";
+    private string _openAI_Key = "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";
     /// <summary>
     /// apiµÿ÷∑
     /// </summary>

@@ -185,12 +185,10 @@ public abstract class CropBase : BaseBuild
                                 break;
                             case "雪":
                             case "小雨":
-                                actualCropNum = Crop_Apple.Production * 6 / 5;
+                                actualCropNum = Crop_Apple.Production * 11 / 10;
                                 break;
                             case "暴雨":
                             case "高温":
-                                actualCropNum = Crop_Apple.Production * 2 / 5;
-                                break;
                             case "沙尘暴":
                                 actualCropNum = Crop_Apple.Production * 4 / 5;
                                 break;
@@ -207,13 +205,15 @@ public abstract class CropBase : BaseBuild
                             case "普通":
                                 actualCropNum = Crop_Sunflower.Production;
                                 break;
-                            case "雪":
-                            case "暴雨":
                             case "小雨":
+                                actualCropNum = Crop_Sunflower.Production * 3 / 5;
+                                break;
+                            case "暴雨":
                                 actualCropNum = Crop_Sunflower.Production * 1 / 5;
                                 break;
                             case "高温":
                             case "沙尘暴":
+                            case "雪":
                                 actualCropNum = Crop_Sunflower.Production * 8 / 5;
                                 break;
                         }
@@ -236,7 +236,7 @@ public abstract class CropBase : BaseBuild
                                 actualCropNum = Crop_Wheat.Production * 6 / 5;
                                 break;
                             case "暴雨":
-                                actualCropNum = Crop_Wheat.Production * 3 / 5;
+                                actualCropNum = Crop_Wheat.Production * 1 / 5;
                                 break;
                         }
                         if (exp[1] < 10)
